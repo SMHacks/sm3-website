@@ -1,0 +1,77 @@
+/* ----- FONTS ----- */
+
+body {
+    font-family: "Lato", "Open Sans", sans-serif;
+}
+
+/* ----- NAV ----- */
+
+.navbar-brand {
+    font-family: 'PT Mono', monospace;
+    color: #FD9845;
+    font-size: 1.5em;
+}
+
+#nav {
+    background-color: #F1F1F1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9998;
+    opacity: .9;
+    padding: 20px;
+}
+
+/* ----- SECTION SPACING ----- */
+
+section {
+    padding: 25px;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----- TOP ----- */
+
+#top {
+    background-color: #F1F1F1;
+    margin-top: 0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+}
+
+#logo-div {
+    padding: 15px;
+}
+
+#logo-img {
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 15px;
+    height: 340px;
+    position: relative;
+    pointer-events: none;
+}
+
+/* ----- ABOUT ----- */
+
+
+/* ----- SCHEDULE ----- */
+
+
+/* ----- FAQ ----- */
+
+
+/* ----- ORGANIZERS ----- */
+
+
+/* ----- SPONSORS ----- */
+
+
+/* ----- FOOTER ----- */
+
+footer {
+    text-align: center;
+}
