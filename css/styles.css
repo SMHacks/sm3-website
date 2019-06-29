@@ -1,7 +1,21 @@
 /* ----- FONTS ----- */
 
+/*
+TODO:
+   Scale font size with window size
+*/
+
 body {
+    background-color: #f1f1f1;
     font-family: "Lato", "Open Sans", sans-serif;
+}
+
+section p {
+    font-size: x-large;
+}
+
+a, a:visited, a:link {
+    color: #FD9845;
 }
 
 /* ----- NAV ----- */
@@ -25,17 +39,20 @@ body {
 /* ----- SECTION SPACING ----- */
 
 section {
-    padding: 25px;
+    padding: 50px 10vw;
     width: 100%;
     align-content: center;
     justify-content: center;
     align-items: center;
 }
 
+.heading {
+    margin-bottom: 20px;
+}
+
 /* ----- TOP ----- */
 
 #top {
-    background-color: #F1F1F1;
     margin-top: 0;
     padding-top: 150px;
     padding-bottom: 150px;
@@ -57,18 +74,58 @@ section {
 
 /* ----- ABOUT ----- */
 
+#about {
+    background-color: #fdd4aa;
+}
+
 
 /* ----- SCHEDULE ----- */
 
+#schedule {
+}
 
 /* ----- FAQ ----- */
 
+#faq {
+    background-color: #fdd4aa;
+}
+
+#faq h3 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#faq h3:hover {
+    cursor: pointer;
+}
+
+#faq p {
+    margin-left: 25px;
+}
 
 /* ----- ORGANIZERS ----- */
 
+#organizers {
+}
 
 /* ----- SPONSORS ----- */
 
+#sponsors-head {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+#sponsors-head .heading {
+    margin-bottom: 20px;
+}
+
+#sponsors-head h4 {
+    color: #CCC;
+}
+
+#sponsors {
+}
 
 /* ----- FOOTER ----- */
 
