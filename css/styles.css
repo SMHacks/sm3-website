@@ -1,4 +1,12 @@
 /* ----- FONTS ----- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Muli", sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+}
 /*
 TODO:
    Scale font size with window size
@@ -6,6 +14,11 @@ TODO:
 
 body {
     background-color: #F1F1F1;
+}
+
+.content-div {
+    margin: auto;
+    max-width: 1000px;
 }
 
 section p {
@@ -19,7 +32,6 @@ a, a:visited, a:link {
 /* ----- NAV ----- */
 
 .navbar-brand {
-    font-family: 'Open Sans', monospace;
     color: #FD9845;
     font-size: 1.5em;
 }
@@ -95,6 +107,14 @@ section {
 /* ----- FAQ ----- */
 
 #faq {
+}
+
+#faq-content .row {
+    padding-bottom: 30px;
+}
+
+#faq-content .block {
+    padding: 0 30px;
 }
 
 #faq h3 {
