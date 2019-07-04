@@ -4,244 +4,225 @@
 <head>
     <meta charset="UTF-8">
     <title>SM Hacks III</title>
-    <link rel="icon" href="./img/logo.ico">
+    <link rel="icon" href="assets/img/logo.ico">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+            integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
+            integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous">
     </script>
-
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 
 <body>
-    <main>
-        <nav class="navbar navbar-expand-lg navbar-light bg-custom" id="nav">
-            <a class="navbar-brand" href="#"><i>SM</i></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+<main>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom" id="nav">
+        <a class="navbar-brand" href="#"><i>SM</i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#schedule">Schedule</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#faq">FAQ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#organizers">Organizers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sponsors">Sponsors</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-
-        <section id="top">
-
-            <div class="container-fluid">
-                <div id="logo-div" class="row">
-                    <img id="logo-img" src="./img/logo.svg">
-                </div>
-
-                <h1>February 15-16, 2020</h1>
-                <h2>Location TBD</h2>
-
-            </div>
-        </section>
-
-        <section id="about">
-            <h1 class="heading">About</h1>
-            <div class="container-fluid">
-                <p>
-                    SM Hacks III is a highschool hackathon that is aimed at high schoolers in the San Francisco Bay Area
-                    of
-                    all coding experience levels and backgrounds.
-                </p>
-                <p>
-                    Our mission is to provide a safe, welcoming, racially
-                    diverse, and supportive space for students to explore the field of computer science.
-                </p>
-            </div>
-        </section>
-
-        <section id="schedule">
-            <h1 class="heading">Schedule</h1>
-        </section>
-
-        <!-- TODO: Add email subscription -->
-
-        <section id="faq">
-            <h1 class="heading">FAQ</h1>
-            <!--        Copied from old website         -->
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 block">
-                        <h3>What is a hackathon?</h3>
-                        <p>A hackathon is a 24-hour programming marathon where your ideas come to life. Over the course
-                            of
-                            the weekend, students from all backgrounds and all skill levels collaborate in teams of up
-                            to
-                            four to build something awesome. All participants
-                            must abide by the <a class="link" href="assets/pdf/mlh-code-of-conduct.pdf"
-                                target="_blank">MLH
-                                Code of Conduct</a>.</p>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-1">
-                            <h3>What if I don't know how to code?</h3>
-                        </div>
-                        <div id="faq-1" class="collapse">
-                            <p>No worries! SM Hacks is the perfect time to learn how to code and all students,
-                                regardless of
-                                skill level and experience, are welcome. There will be plenty of mentors on hand glad to
-                                answer any and all questions and workshops specifically
-                                designed for those with no prior experience. Stay tuned for more information about
-                                workshops!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-2">
-                            <h3>Do I have to be in high school?</h3>
-                        </div>
-                        <div id="faq-2" class="collapse">
-                            <p>Yes, only current high school students will be able to attend. Unfortunately, we are not
-                                accepting middle school students. College students are welcome to help out as mentors!
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-3">
-                            <h3>What if I don't have a team or an idea?</h3>
-                        </div>
-                        <div id="faq-3" class="collapse">
-                            <p>No worries! It is not uncommon for people to come into the hackathon without an
-                                already-formed
-                                group, but we'll make sure you're matched with the right people! We will have a team
-                                formation
-                                and ideation session the first night so everyone
-                                can find the perfect team and come up with awesome ideas, so don't you worry first-time
-                                hackers!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-4">
-                            <h3>How big can teams be?</h3>
-                        </div>
-                        <div id="faq-4" class="collapse">
-                            <p>Teams can be up to four people. While you may work as an individual, we highly encourage
-                                collaborating with others. If you don't have a team or need help finding one, make sure
-                                not to miss our team formation and ideation session on Saturday.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-5">
-                            <h3>What should I bring?</h3>
-                        </div>
-                        <div id="faq-5" class="collapse">
-                            <p>Attendees should bring a valid student ID or some other form of identification, as well
-                                as a signed and completed waiver. Bring laptops and chargers, along with any other
-                                technology that you may want to use! We will have designated sleeping spots so feel free
-                                to bring a sleeping bag and pillow. Also it is highly suggested that you bring
-                                toiletries so you can feel refreshed and beautiful!</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-6">
-                            <h3>How much does it cost to attend?</h3>
-                        </div>
-                        <div id="faq-6" class="collapse">
-                            <p>Nothing! Just bring your beautiful self and ideas and we will provide you with the food,
-                                WiFi,
-                                workspace, and swag!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-lg-6 block">
-
-                        <div data-toggle="collapse" data-target="#faq-7">
-                            <h3>How can I apply?</h3>
-                        </div>
-                        <div id="faq-7" class="collapse">
-                            <!-- TODO: change this text-->
-                            <p>Applications for hackers have not yet opened, but <a class="link" href="#subscribe">click
-                                    here</a> to be notified as soon as you can apply!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-
-            <div class="col-lg-6 block">
-
-                <div data-toggle="collapse" data-target="#faq-8">
-                    <h3>What if I have another question?</h3>
-                </div>
-                <div id="faq-8" class="collapse">
-                    <p>Email us at <a class="link" href="mailto:team@smhacks.com">team@smhacks.com</a> if you
-                        have any
-                        additional questions. We are always happy to help!</p>
-                </div>
-            </div>
-            </div>
-            </div>
-        </section>
-
-        <section id="organizers">
-            <h1 class="heading">Organizers</h1>
-        </section>
-
-        <section id="sponsors-head">
-            <h1 class="heading">Sponsors</h1>
-            <h4>Interested in sponsoring?</h4>
-            <h4>Email us at <a class="link" href="mailto:sponsors@smhacks.com">sponsors@smhacks.com</a>!</h4>
-        </section>
-
-        <section id="sponsors">
-
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>Copyright &copy; SM Hacks 2019-2020. All rights reserved.</p>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#schedule">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#organizers">Organizers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#sponsors">Sponsors</a>
+                </li>
+            </ul>
         </div>
-    </footer>
-</body>
+    </nav>
 
-</html>
-</html>
+    <section id="top">
+        <div class="container-fluid" id="title-div">
+            <div id="logo-div" class="row">
+                <img id="logo-img" src="assets/img/logo.svg" alt="Logo">
+            </div>
+            <h1>February 15-16, 2020</h1>
+            <h2>Location TBD</h2>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="heading">About</h1>
+        <div class="container-fluid">
+            <p>
+                SM Hacks III is a highschool hackathon that is aimed at high school students in the San Francisco Bay
+                Area of all coding experience levels and backgrounds.
+            </p>
+            <p>
+                Our mission is to provide a safe, welcoming, racially
+                diverse, and supportive space for students to explore the field of computer science.
+            </p>
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h1 class="heading">Schedule</h1>
+    </section>
+
+    <!-- TODO: Add email subscription -->
+
+    <section id="faq">
+        <h1 class="heading">FAQ</h1>
+        <!--        Copied from old website         -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 block">
+                    <h3>What is a hackathon?</h3>
+                    <p>A hackathon is a 24-hour programming marathon where your ideas come to life. Over the course of
+                        the weekend, students from all backgrounds and all skill levels collaborate in teams of up to
+                        four to build something awesome. All participants must abide by the
+                        <a class="link" href="./assets/pdf/mlh-code-of-conduct.pdf" target="_blank">MLH Code of
+                            Conduct</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 block">
+                    <div data-toggle="" data-target="#faq-1">
+                        <h3>What if I don't know how to code?</h3>
+                    </div>
+                    <div id="faq-1" class="">
+                        <p>No worries! SM Hacks is the perfect time to learn how to code and all students, regardless of
+                            skill level and experience, are welcome. There will be plenty of mentors on hand glad to
+                            answer any and all questions and workshops specifically designed for those with no prior
+                            experience. Stay tuned for more information about workshops!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 block">
+
+                    <div data-toggle="" data-target="#faq-2">
+                        <h3>Do I have to be in high school?</h3>
+                    </div>
+                    <div id="faq-2" class="">
+                        <p>Yes, only current high school students will be able to attend. Unfortunately, we are not
+                            accepting middle school students. College students are welcome to help out as mentors!
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 block">
+
+                    <div data-toggle="" data-target="#faq-3">
+                        <h3>What if I don't have a team or an idea?</h3>
+                    </div>
+                    <div id="faq-3" class="">
+                        <p>No worries! It is not uncommon for people to come into the hackathon without an
+                            already-formed group, but we'll make sure you're matched with the right people! We will have
+                            a team formation and ideation session the first night so everyone can find the perfect team
+                            and come up with awesome ideas, so don't you worry first-time hackers!</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 block">
+
+                    <div data-toggle="" data-target="#faq-4">
+                        <h3>How big can teams be?</h3>
+                    </div>
+                    <div id="faq-4" class="">
+                        <p>Teams can be up to four people. While you may work as an individual, we highly encourage
+                            collaborating with others. If you don't have a team or need help finding one, make sure
+                            not to miss our team formation and ideation session on Saturday.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 block">
+
+                    <div data-toggle="" data-target="#faq-5">
+                        <h3>What should I bring?</h3>
+                    </div>
+                    <div id="faq-5" class="">
+                        <p>Attendees should bring a valid student ID or some other form of identification, as well
+                            as a signed and completed waiver. Bring laptops and chargers, along with any other
+                            technology that you may want to use! We will have designated sleeping spots so feel free
+                            to bring a sleeping bag and pillow. Also it is highly suggested that you bring
+                            toiletries so you can feel refreshed and beautiful!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 block">
+
+                    <div data-toggle="" data-target="#faq-6">
+                        <h3>How much does it cost to attend?</h3>
+                    </div>
+                    <div id="faq-6" class="">
+                        <p>Nothing! Just bring your beautiful self and ideas and we will provide you with the food,
+                            WiFi,
+                            workspace, and swag!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-6 block">
+
+                    <div data-toggle="" data-target="#faq-7">
+                        <h3>How can I apply?</h3>
+                    </div>
+                    <div id="faq-7" class="">
+                        <!-- TODO: create notification system; mailchimp?-->
+                        <p>Applications for hackers have not yet opened, but <a class="link" href="#subscribe">click
+                            here</a> to be notified as soon as you can apply!</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 block">
+                    <div data-toggle="" data-target="#faq-8">
+                        <h3>What if I have another question?</h3>
+                    </div>
+                    <div id="faq-8" class="">
+                        <p>Email us at <a class="link" href="mailto:team@smhacks.com">team@smhacks.com</a> if you
+                            have any
+                            additional questions. We are always happy to help!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="organizers">
+        <h1 class="heading">Organizers</h1>
+    </section>
+
+    <section id="sponsors-head">
+        <h1 class="heading">Sponsors</h1>
+        <h4>Interested in sponsoring?</h4>
+        <h4>Email us at <a class="link" href="mailto:sponsors@smhacks.com">sponsors@smhacks.com</a>!</h4>
+    </section>
+
+    <section id="sponsors">
+
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>Copyright &copy; SM Hacks 2019-2020. All rights reserved.</p>
+    </div>
+</footer>
+</body>
 </html>
