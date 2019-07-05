@@ -1,3 +1,12 @@
+/* ----- CONSTANTS ----- */
+:root {
+    --panel-bg-light: #F1F1F1;
+    --panel-bg-dark: #E7E7E7;
+    --bg-grey: #333333;
+    --text-orange: #FD9845;
+
+}
+
 /* ----- FONTS ----- */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Muli", sans-serif;
@@ -7,13 +16,14 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: "Open Sans", sans-serif;
 }
+
 /*
 TODO:
    Scale font size with window size
 */
 
-body {
-    background-color: #F1F1F1;
+body, footer {
+    background-color: var(--panel-bg-light);
 }
 
 .content-div {
@@ -37,7 +47,7 @@ a, a:visited, a:link {
 }
 
 #nav {
-    background-color: #F1F1F1;
+    background-color: var(--panel-bg-light);
     position: fixed;
     top: 0;
     width: 100%;
@@ -48,6 +58,7 @@ a, a:visited, a:link {
 /* ----- SECTION SPACING ----- */
 
 section {
+    background-color: var(--panel-bg-light);
     padding: 50px 10vw;
     width: 100%;
     align-content: center;
@@ -63,7 +74,7 @@ section {
 
 #top {
     position: relative;
-    background-color: #333;
+    background-color: transparent;
     color: #FD9845;
     margin-top: 0;
     padding-top: 150px;
@@ -71,6 +82,17 @@ section {
     text-align: center;
     height: 100vh;
     min-height: 400px;
+}
+
+#top-background-container {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    background-image: url(../assets/img/background.png);
+    background-repeat: repeat;
 }
 
 #title-div {
@@ -101,7 +123,7 @@ section {
 /* ----- SCHEDULE ----- */
 
 #schedule {
-    background-color: #e7e7e7;
+    background-color: var(--panel-bg-dark);
 }
 
 /* ----- FAQ ----- */
@@ -130,17 +152,11 @@ section {
     margin-left: 25px;
 }
 
-/* ----- ORGANIZERS ----- */
-
-#organizers {
-    background-color: #e7e7e7;
-}
-
 /* ----- SPONSORS ----- */
 
 #sponsors-head {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--bg-grey);
+    color: var(--panel-bg-light);
     text-align: center;
 }
 
@@ -153,11 +169,21 @@ section {
 }
 
 #sponsors {
+
+}
+
+/* ----- ORGANIZERS ----- */
+
+#organizers {
+    background-color: var(--panel-bg-light);
 }
 
 /* ----- FOOTER ----- */
 
 footer {
+    padding: 5px 0;
+    position: relative;
+    background-color: var(--panel-bg-light);
     text-align: center;
 }
 
