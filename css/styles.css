@@ -55,6 +55,13 @@ a, a:visited, a:link {
     opacity: .9;
 }
 
+.anchor {
+    display: block;
+    position: relative;
+    top: -112px;
+    visibility: hidden;
+}
+
 /* ----- SECTION SPACING ----- */
 
 section {
@@ -72,7 +79,7 @@ section {
 
 /* ----- TOP ----- */
 
-#top {
+#top-section {
     position: relative;
     background-color: transparent;
     color: #FD9845;
@@ -116,19 +123,19 @@ section {
 
 /* ----- ABOUT ----- */
 
-#about {
+#about-section {
 }
 
 
 /* ----- SCHEDULE ----- */
 
-#schedule {
+#schedule-section {
     background-color: var(--panel-bg-dark);
 }
 
 /* ----- FAQ ----- */
 
-#faq {
+#faq-section {
 }
 
 #faq-content .row {
@@ -139,16 +146,16 @@ section {
     padding: 0 30px;
 }
 
-#faq h3 {
+#faq-section h3 {
     margin-top: 10px;
     font-weight: bold;
 }
 
-#faq h3:hover {
+#faq-section h3:hover {
     cursor: pointer;
 }
 
-#faq p {
+#faq-section p {
     margin-left: 25px;
 }
 
@@ -168,13 +175,13 @@ section {
     color: #CCC;
 }
 
-#sponsors {
+#sponsors-section {
 
 }
 
 /* ----- ORGANIZERS ----- */
 
-#organizers {
+#organizers-section {
     background-color: var(--panel-bg-light);
 }
 
