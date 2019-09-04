@@ -39,6 +39,23 @@ a, a:visited, a:link {
     color: #FD9845;
 }
 
+th, td {
+    color: #000;
+    border-top: 1px #000 solid;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
 /* ----- NAV ----- */
 
 .navbar-brand {
@@ -133,9 +150,37 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
+#schedule-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+#schedule-section p {
+    text-align: center;
+    margin-bottom: 150px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* ----- Workshops ----- */
+#workshops-section p {
+    text-align: center; 
+    margin-bottom: 150px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#workshops-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
 /* ----- FAQ ----- */
 
 #faq-section {
+    background-color: var(--panel-bg-dark);
 }
 
 #faq-content .row {
