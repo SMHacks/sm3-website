@@ -127,7 +127,7 @@ section {
 #about-section {
 }
 
-#about-text, #about-img {
+#about-text, #about-img-div {
     margin: 0 20px;
     width: 50%;
     padding: 25px;
@@ -138,9 +138,22 @@ section {
     /*background-color: var(--panel-bg-dark);*/
 }
 
+#about-img-div {
+    /*border-radius: 10px;*/
+    /*background-color: var(--panel-bg-dark);*/
+    padding: 0;
+    position: relative;
+
+}
+
 #about-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
-    background-color: var(--panel-bg-dark);
+    width: 100%;
+    object-fit: contain;
     box-shadow: 5px 5px 15px #AAA;
 }
 
@@ -158,10 +171,12 @@ section {
 
 #faq-section h3 {
     font-weight: bold;
+    font-size: x-large;
 }
 
 #faq-section p {
     margin-left: 25px;
+    font-size: large;
 }
 
 .faq-container, .faq-top-container {
@@ -187,7 +202,7 @@ section {
 }
 
 .faq-container:hover, .faq-top-container:hover {
-    transform: scale(1.01, 1.01);
+    transform: scale(1.005, 1.005);
 }
 
 .faq-container:hover::after, .faq-top-container:hover::after {
@@ -195,7 +210,7 @@ section {
 }
 
 .faq-top-container {
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .faq-container {
