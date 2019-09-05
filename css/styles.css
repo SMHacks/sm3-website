@@ -4,6 +4,7 @@
     --panel-bg-dark: #E7E7E7;
     --bg-grey: #333333;
     --text-orange: #FD9845;
+    --panel-bg-orange: #ffddc2;
 
 }
 
@@ -125,6 +126,7 @@ section {
 /* ----- ABOUT ----- */
 
 #about-section {
+    background-color: var(--panel-bg-dark);
 }
 
 #about-text, #about-img-div {
@@ -157,6 +159,29 @@ section {
     box-shadow: 5px 5px 15px #AAA;
 }
 
+/* ----- GALLERY ----- */
+
+#gallery-section {
+    background-color: var(--panel-bg-light);
+
+}
+
+.gallery-img-div {
+    padding: 10px;
+}
+
+.gallery-img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: scale-down;
+    box-shadow: 0 5px 10px #BBB;
+    transition: all 0.25s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.025, 1.025);
+}
+
 
 /* ----- SCHEDULE ----- */
 
@@ -184,7 +209,11 @@ section {
     background-color: var(--panel-bg-dark);
     padding: 20px;
     margin: 10px 0;
-    transition: all 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+}
+
+.faq-container *, .faq-top-container * {
+    transition: none;
 }
 
 .faq-container::after, .faq-top-container::after {
@@ -197,7 +226,7 @@ section {
     width: 100%;
     height: 100%;
     box-shadow: 0 5px 10px #CCC;
-    transition: all 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
     opacity: 0;
 }
 
