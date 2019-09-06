@@ -158,15 +158,18 @@ section {
 
 #schedule-section p {
     text-align: center;
-    margin-bottom: 150px;
     font-size: 18px;
     margin-top: 20px;
 }
 
 /* ----- Workshops ----- */
+#workshops-section {
+    background-color: var(--panel-bg-dark);
+}
+
 #workshops-section p {
     text-align: center; 
-    margin-bottom: 150px;
+    margin-bottom: 30px;
     font-size: 18px;
     margin-top: 20px;
 }
@@ -180,7 +183,6 @@ section {
 /* ----- FAQ ----- */
 
 #faq-section {
-    background-color: var(--panel-bg-dark);
 }
 
 #faq-content .row {
