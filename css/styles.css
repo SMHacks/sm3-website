@@ -48,7 +48,7 @@ a, a:visited, a:link {
 }
 
 #nav {
-    background-color: var(--panel-bg-light);
+    background-color: var(--bg-grey);
     position: fixed;
     top: 0;
     width: 100%;
