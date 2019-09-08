@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
+  <meta name="viewport" content ="width=device=width, initial-scale=1.0">
   <title>SM Hacks III</title>
 
   <link rel="icon" href="assets/img/logo.ico"/>
@@ -26,41 +27,43 @@
 
 <body>
 <main>
-  <nav class="navbar navbar-expand-lg navbar-light bg-custom" id="nav">
-    <!--        TODO: maybe change margins/paddings for the navbar text to make it more centered-->
-    <a class="navbar-brand" href="#"><i>SM</i></a>
-    <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#gallery">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#schedule">Schedule</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#faq">FAQ</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#organizers">Organizers</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#sponsors">Sponsors</a>
-        </li>
-      </ul>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-custom" id="nav">
+    <div class="container">
+      <!--        TODO: maybe change margins/paddings for the navbar text to make it more centered-->
+      <a class="navbar-brand" href="#"><i>SM</i></a>
+      <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#schedule">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#organizers">Organizers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sponsors">Sponsors</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -350,24 +353,32 @@
   </div>
 </footer>
 
-<!-- Jquery JS, Popper JS, and Bootsrap JS Scripts -->
+<!-- Jquery JS -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script
     src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
     integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
     crossorigin="anonymous"
 ></script>
+
+<!-- Popper JS -->
 <script
     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
     integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
     crossorigin="anonymous"
 ></script>
+
+<!-- Bootstrap JS -->
 <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
 ></script>
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Particle JS -->
+<script src="js/particles.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
