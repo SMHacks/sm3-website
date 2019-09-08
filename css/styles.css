@@ -48,6 +48,16 @@ th, td {
     vertical-align: middle;
 }
 
+.top-header:hover {
+    background: transparent;
+    text-shadow: none;
+}
+
+tr:hover {
+    background: #d9d9d9;
+    text-shadow: 2px 2px 10px #000;
+}
+
 table {
     border-collapse: collapse;
     width: 90%;
@@ -150,6 +160,20 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
+#schedule-section .btn {
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 16px;
+    background: #FD9845;
+    border: 2px solid #FD9845;
+    color: white;
+}
+
+#schedule-section .btn:hover {
+    background: transparent;
+    color: #FD9845;
+}
+
 #schedule-section h2 {
     text-align: center;
     font-size: 30px;
@@ -160,24 +184,6 @@ section {
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
-}
-
-/* ----- Workshops ----- */
-#workshops-section {
-    background-color: var(--panel-bg-dark);
-}
-
-#workshops-section p {
-    text-align: center; 
-    margin-bottom: 30px;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-#workshops-section h2 {
-    text-align: center;
-    font-size: 30px;
-    margin: 30px 0;
 }
 
 /* ----- FAQ ----- */
