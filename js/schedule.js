@@ -1,21 +1,23 @@
-var satTimes = document.getElementsByClassName('sat-time');
-var satEvents = document.getElementsByClassName('sat-event');
-var sunTimes = document.getElementsByClassName('sun-time');
-var sunEvents = document.getElementsByClassName('sun-event');
-var tableRows = document.getElementsByClassName('tr');
-var i = 0;
+let satTimes = document.getElementsByClassName('sat-time');
+let satEvents = document.getElementsByClassName('sat-event');
+let sunTimes = document.getElementsByClassName('sun-time');
+let sunEvents = document.getElementsByClassName('sun-event');
+let tableRows = document.getElementById('schedule-section').getElementsByClassName('tr');
+let i = 0;
 
-function plusDivs(n) {
+/**
+ * Steps the schedule forward or backward.
+ * @param n        number of events to step (positive = forward, negative = backward)
+ */
+function stepScheduleEvent(n) {
 	i += n;
 	if (i < 0) {
 		i = 0;
-	}
-	else if (n == 1 && i < satTimes.length + sunTimes.length) {
+	} else if (n === 1 && i < satTimes.length + sunTimes.length) {
 		tableRows[i - 1].className = tableRows[i - 1].className.replace(" active", "");
 		tableRows[i].className += " active";
-		
-	}
-	else if (n == -1) {
+
+	} else if (n === -1) {
 		tableRows[i + 1].className = tableRows[i + 1].className.replace(" active", "");
 		tableRows[i].className += " active";
 	}
@@ -24,16 +26,14 @@ function plusDivs(n) {
 
 function showContent() {
 	if (i < satTimes.length) {
-		document.getElementById('event').innerHTML = satEvents[i].innerHTML;
+		document.getElementById('schedule-detail-event').innerHTML = satEvents[i].innerHTML;
 		document.getElementById('time').innerHTML = 'Saturday, ' + satTimes[i].innerHTML;
 		viewSat();
-	}
-	else if (i >= satTimes.length && i < satTimes.length + sunTimes.length) {
-		document.getElementById('event').innerHTML = sunEvents[i - satEvents.length].innerHTML;
+	} else if (i >= satTimes.length && i < satTimes.length + sunTimes.length) {
+		document.getElementById('schedule-detail-event').innerHTML = sunEvents[i - satEvents.length].innerHTML;
 		document.getElementById('time').innerHTML = 'Sunday, ' + sunTimes[i - satTimes.length].innerHTML;
 		viewSun();
-	}
-	else if (i >= satTimes.length + sunTimes.length) {
+	} else if (i >= satTimes.length + sunTimes.length) {
 		i = satTimes.length + sunTimes.length - 1;
 	}
 }
@@ -45,23 +45,26 @@ function viewSun() {
 
 function viewSat() {
 	$('#scheduleSun').hide();
-	$('#scheduleSat').show();	
+	$('#scheduleSat').show();
 }
 
-$(document).ready(function(){
+/**
+ * Initializes schedule and active elements.
+ */
+$(document).ready(function () {
 	$('#scheduleSun').hide();
-	$('#viewSun').click(function() {
+	$('#viewSun').click(function () {
 		viewSun();
 		tableRows[i].className = tableRows[i].className.replace(" active", "");
 		i = satTimes.length;
 		tableRows[i].className += " active";
 		showContent();
-	})
-	$('#viewSat').click(function() {
+	});
+	$('#viewSat').click(function () {
 		viewSat();
 		tableRows[i].className = tableRows[i].className.replace(" active", "");
 		i = 0;
 		tableRows[i].className += " active";
 		showContent();
-	})
-})
+	});
+});

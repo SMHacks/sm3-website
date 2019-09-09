@@ -39,38 +39,6 @@ a, a:visited, a:link {
     color: #FD9845;
 }
 
-th, td {
-    color: #000;
-    padding: 10px;
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-.sat-time, .sun-time, .th-time {
-    text-align: right;
-}
-
-.sat-event, .sun-event, .th-event {
-    text-align: left;
-}
-
-.top-header:hover {
-    background: transparent;
-    text-shadow: none;
-}
-
-tr:hover {
-    background: #d9d9d9;
-}
-
-table {
-    border-collapse: collapse;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 15px;
-}
-
 /* ----- NAV ----- */
 
 .navbar-brand {
@@ -165,6 +133,34 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
+#schedule-section th, #schedule-section td {
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#schedule-section tbody tr:not(.active):hover {
+    background: #E0E0E0;
+}
+
+#schedule-section table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.sat-time, .sun-time, .th-time {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.sat-event, .sun-event, .th-event {
+    text-align: left;
+}
+
 #schedule-section .btn {
     margin-bottom: 20px;
     width: 80%;
@@ -200,24 +196,27 @@ section {
     text-align: left;
 }
 
-#scheduleSat {
-    max-height: 550px;
+#scheduleSat .schedule-event-div {
+    max-height: 450px;
     overflow-y: auto;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 5px;
+#scheduleSat table, #scheduleSun table {
+    overflow-y: auto;
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background : #FD9845;
-  border-radius: 10px;
+.schedule-scrollbar::-webkit-scrollbar {
+    width: 5px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background : rgba(255,255,255,0.5);
-  border-radius: 10px;
-  box-shadow:  0 0 6px rgba(0, 0, 0, 0.5);
+.schedule-scrollbar::-webkit-scrollbar-track {
+    background: #FAC8A2;
+    border-radius: 10px;
+}
+
+.schedule-scrollbar::-webkit-scrollbar-thumb {
+    background: #FD9845;
+    border-radius: 10px;
 }
 
 #schedule-section .active {
@@ -307,7 +306,7 @@ footer {
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 768px) {
-     #scheduleSat {
+    #scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div {
         max-height: none;
         overflow-y: auto;
     }

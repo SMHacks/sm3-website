@@ -1,412 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>SM Hacks III</title>
+<head>
+  <meta charset="UTF-8"/>
+  <title>SM Hacks III</title>
 
-    <link rel="icon" href="assets/img/logo.ico" />
+  <link rel="icon" href="assets/img/logo.ico"/>
 
-    <!-- Bootstrap CSS -->
-    <link
+  <!-- Bootstrap CSS -->
+  <link
       rel="stylesheet"
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  />
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
 
-    <!-- Fonts -->
-    <link
+  <!-- Fonts -->
+  <link
       href="https://fonts.googleapis.com/css?family=Muli|Open+Sans&display=swap"
       rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Style CSS -->
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-  </head>
+  <!-- Style CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+</head>
 
-  <body>
-    <main>
-      <nav class="navbar navbar-expand-lg navbar-light bg-custom" id="nav">
-        <!--        TODO: maybe change margins/paddings for the navbar text to make it more centered-->
-        <a class="navbar-brand" href="#"><i>SM</i></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#schedule">Schedule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#organizers">Organizers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#sponsors">Sponsors</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+<body>
+<main>
+  <nav class="navbar navbar-expand-lg navbar-light bg-custom" id="nav">
+    <!--        TODO: maybe change margins/paddings for the navbar text to make it more centered-->
+    <a class="navbar-brand" href="#"><i>SM</i></a>
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#schedule">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#organizers">Organizers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#sponsors">Sponsors</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-      <div id="top-background-container"></div>
+  <div id="top-background-container"></div>
 
-        <section id="top-section">
-            <a class="anchor" id="top"></a>
-        <div class="container-fluid content-div" id="title-div">
-          <div id="logo-div" class="row">
-            <img id="logo-img" src="assets/img/logo.svg" alt="Logo" />
-          </div>
-          <h1>February 15-16, 2020</h1>
-          <h2>Location TBD</h2>
-        </div>
-      </section>
-
-        <section id="about-section">
-            <a class="anchor" id="about"></a>
-        <div class="content-div">
-          <h1 class="heading">About</h1>
-          <div class="container-fluid">
-            <p>
-              SM Hacks III is a highschool hackathon that is aimed at high
-              school students in the San Francisco Bay Area of all coding
-              experience levels and backgrounds.
-            </p>
-            <p>
-              Our mission is to provide a safe, welcoming, diverse, and
-              supportive space for students to explore the field of computer
-              science.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="schedule-section">
-        <a class="anchor" id="schedule"></a>
-        <div class="content-div">
-          <h1 class="heading">Schedule</h1>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12 col-lg-6 schedule-slides">
-                <div class="row">
-                  <div class="col-sm-12 col-md-8 schedule-content">
-                  <h1 id="event">Attendee Check-In</h1>
-                  <h2 id="time">Saturday, 10:30 AM</h2>
-                  <h2 id="location"><i class="fa fa-location-arrow"></i>TBA</h2>
-                </div>
-                <div class="col-sm-12 col-md-4 nav-arrows">
-                  <button class="fa fa-arrow-circle-left" onclick="plusDivs(-1)"></button> 
-                  <button class="fa fa-arrow-circle-right" onclick="plusDivs(1)"></button>
-                </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-6 custom-scrollbar" id="scheduleSat">
-                <h2>Saturday - Feburary 15</h2>
-                <button class="btn btn-secondary mx-auto d-block" id="viewSun">View Sunday</button>
-                <table>
-                  <tr class="top-header">
-                    <th class="top-header th-time">Time</th>
-                    <th class="top-header th-event">Event</th>
-                  </tr>
-                  <tr class="tr active">
-                    <td class="sat-time">10:30 AM</td>
-                    <td class="sat-event">Attendee Check-In</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">11:30 AM</td>
-                    <td class="sat-event">Opening Ceremony</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">12:00 PM</td>
-                    <td class="sat-event">Lunch; Hacking Begins!</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">12:30 PM</td>
-                    <td class="sat-event">Team-Mixer</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">1:30 PM</td>
-                    <td class="sat-event">Workshops Begin; <br> Scaling with ReactJS Workshop</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">2:45 PM</td>
-                    <td class="sat-event">Intro to Web Development Workshop</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">3:45 PM</td>
-                    <td class="sat-event">Clean Code Workshop</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">4:30 PM</td>
-                    <td class="sat-event">Tech Talk: The Computer Science Industry</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">6:30 PM</td>
-                    <td class="sat-event">Dinner</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sat-time">9:00 PM</td>
-                    <td class="sat-event">Cup Stacking!</td>
-                  </tr>
-                </table>  
-                <p>*Subject to change</p>
-              </div>
-
-              <div class="col-md-12 col-lg-6 custom-scrollbar" id="scheduleSun">
-                <h2>Sunday - Feburary 16</h2>
-                <button class="btn btn-secondary mx-auto d-block" id="viewSat">View Saturday</button>
-                <table>
-                  <tr class="top-header">
-                    <th class="top-header th-time">Time</th>
-                    <th class="top-header th-event">Event</th>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sun-time">12:00 AM</td>
-                    <td class="sun-event">Midnight Snack</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sun-time">7:00 AM</td>
-                    <td class="sun-event">Breakfast; Submissions on Devpost</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sun-time">8:00 AM</td>
-                    <td class="sun-event">Hacking Ends</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sun-time">9:00 AM</td>
-                    <td class="sun-event">Judging</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sun-time">11:00 AM</td>
-                    <td class="sun-event">Closing Ceremony</td>
-                  </tr>
-                  <tr class="tr">
-                    <td class="sun-time">12:00 PM</td>
-                    <td class="sun-event">End of Hackathon</td>
-                  </tr>
-                </table>
-                <p>*Subject to change</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TODO: Add email subscription -->
-
-        <section id="faq-section">
-            <div class="anchor" id="faq"></div>
-        <div class="content-div">
-          <h1 class="heading">FAQ</h1>
-          <!--        Copied from old website         -->
-          <div class="container-fluid" id="faq-content">
-            <div class="row">
-              <div class="col-12 block">
-                <h3>What is a hackathon?</h3>
-                <p>
-                  A hackathon is a 24-hour programming marathon where your ideas
-                  come to life. Over the course of the weekend, students from
-                  all backgrounds and all skill levels collaborate in teams of
-                  up to four to build something awesome. All participants must
-                  abide by the
-                  <a
-                    class="link"
-                    href="./assets/pdf/mlh-code-of-conduct.pdf"
-                    target="_blank"
-                    >MLH Code of Conduct</a
-                  >.
-                </p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-1">
-                  <h3>What if I don't know how to code?</h3>
-                </div>
-                <div id="faq-1" class="">
-                  <p>
-                    No worries! SM Hacks is the perfect time to learn how to
-                    code and all students, regardless of skill level and
-                    experience, are welcome. There will be plenty of mentors on
-                    hand glad to answer any and all questions and workshops
-                    specifically designed for those with no prior experience.
-                    Stay tuned for more information about workshops!
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-2">
-                  <h3>Do I have to be in high school?</h3>
-                </div>
-                <div id="faq-2" class="">
-                  <p>
-                    Yes, only current high school students will be able to
-                    attend. Unfortunately, we are not accepting middle school
-                    students. College students are welcome to help out as
-                    mentors!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-3">
-                  <h3>What if I don't have a team or an idea?</h3>
-                </div>
-                <div id="faq-3" class="">
-                  <p>
-                    No worries! It is not uncommon for people to come into the
-                    hackathon without an already-formed group, but we'll make
-                    sure you're matched with the right people! We will have a
-                    team formation and brainstorm session the first night so
-                    everyone can find the perfect team and come up with awesome
-                    ideas, so don't you worry first-time hackers!
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-4">
-                  <h3>How big can teams be?</h3>
-                </div>
-                <div id="faq-4" class="">
-                  <p>
-                    Teams can be up to four people. While you may work as an
-                    individual, we highly encourage collaborating with others.
-                    If you don't have a team or need help finding one, make sure
-                    not to miss our team formation and brainstorm session on
-                    Saturday.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-5">
-                  <h3>What should I bring?</h3>
-                </div>
-                <div id="faq-5" class="">
-                  <p>
-                    Attendees should bring a valid student ID or some other form
-                    of identification, as well as a signed and completed waiver.
-                    Bring laptops and chargers, along with any other technology
-                    that you may want to use! We will have designated sleeping
-                    spots so feel free to bring a sleeping bag and pillow. Also
-                    it is highly suggested that you bring toiletries so you can
-                    feel refreshed and beautiful!
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-6">
-                  <h3>How much does it cost to attend?</h3>
-                </div>
-                <div id="faq-6" class="">
-                  <p>
-                    Nothing! Just bring your beautiful self and ideas and we
-                    will provide you with the food, WiFi, workspace, and swag!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-7">
-                  <h3>How can I apply?</h3>
-                </div>
-                <div id="faq-7" class="">
-                  <!-- TODO: create notification system; mailchimp?-->
-                  <p>
-                    Applications for hackers have not yet opened, but
-                    <a class="link" href="#subscribe">click here</a> to be
-                    notified as soon as you can apply!
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-lg-6 block">
-                <div data-toggle="" data-target="#faq-8">
-                  <h3>What if I have another question?</h3>
-                </div>
-                <div id="faq-8" class="">
-                  <p>
-                    Email us at
-                    <a class="link" href="mailto:team@smhacks.com"
-                      >team@smhacks.com</a
-                    >
-                    if you have any additional questions. We are always happy to
-                    help!
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="sponsors-head">
-        <div class="content-div">
-          <h1 class="heading">Sponsors</h1>
-          <h4>Interested in sponsoring?</h4>
-          <h4>
-            Email us at
-            <a class="link" href="mailto:sponsors@smhacks.com"
-              >sponsors@smhacks.com</a
-            >!
-          </h4>
-        </div>
-      </section>
-
-        <section id="sponsors-section">
-            <div class="anchor" id="sponsors"></div>
-        <div class="content-div"></div>
-      </section>
-
-        <section id="organizers-section">
-            <div class="anchor" id="organizers"></div>
-        <div class="content-div">
-          <h1 class="heading">Organizers</h1>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <p>Copyright &copy; SM Hacks 2019-2020. All rights reserved.</p>
+  <section id="top-section">
+    <a class="anchor" id="top"></a>
+    <div class="container-fluid content-div" id="title-div">
+      <div id="logo-div" class="row">
+        <img id="logo-img" src="assets/img/logo.svg" alt="Logo"/>
       </div>
-    </footer>
+      <h1>February 15-16, 2020</h1>
+      <h2>Location TBD</h2>
+    </div>
+  </section>
 
-    <!-- Jquery JS, Popper JS, and Bootsrap JS Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/schedule.js"></script>
-  </body>
+  <section id="about-section">
+    <a class="anchor" id="about"></a>
+    <div class="content-div">
+      <h1 class="heading">About</h1>
+      <div class="container-fluid">
+        <p>
+          SM Hacks III is a highschool hackathon that is aimed at high
+          school students in the San Francisco Bay Area of all coding
+          experience levels and backgrounds.
+        </p>
+        <p>
+          Our mission is to provide a safe, welcoming, diverse, and
+          supportive space for students to explore the field of computer
+          science.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule-section">
+    <a class="anchor" id="schedule"></a>
+    <div class="content-div">
+      <h1 class="heading">Schedule</h1>
+      <div class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-12 col-lg-6 schedule-slides">
+            <div class="row">
+              <div class="col-sm-12 col-md-8 schedule-content">
+                <h1 id="schedule-detail-event">Attendee Check-In</h1>
+                <h2 id="time">Saturday, 10:30 AM</h2>
+                <h2 id="location"><i class="fa fa-location-arrow"></i>TBA</h2>
+              </div>
+
+              <div class="col-sm-12 col-md-4 nav-arrows">
+                <button class="fa fa-arrow-circle-left" onclick="stepScheduleEvent(-1)"></button>
+                <button class="fa fa-arrow-circle-right" onclick="stepScheduleEvent(1)"></button>
+              </div>
+            </div>
+          </div>
+
+          <!--    SATURDAY    -->
+          <div class="col-md-12 col-lg-6" id="scheduleSat">
+            <h2>Saturday - Feburary 15</h2>
+            <button class="btn btn-secondary mx-auto d-block" id="viewSun">View Sunday</button>
+            <div class="schedule-event-div schedule-scrollbar">
+              <table>
+                <thead>
+                <tr class="schedule-top-header">
+                  <th class="th-time">Time</th>
+                  <th class="th-event">Event</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr active">
+                  <td class="sat-time">10:30 AM</td>
+                  <td class="sat-event">Attendee Check-In</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">11:30 AM</td>
+                  <td class="sat-event">Opening Ceremony</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">12:00 PM</td>
+                  <td class="sat-event">Lunch; Hacking Begins!</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">12:30 PM</td>
+                  <td class="sat-event">Team-Mixer</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">1:30 PM</td>
+                  <td class="sat-event">Scaling with ReactJS Workshop</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">2:45 PM</td>
+                  <td class="sat-event">Intro to Web Development Workshop</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">3:45 PM</td>
+                  <td class="sat-event">Clean Code Workshop</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">4:30 PM</td>
+                  <td class="sat-event">Tech Talk: The Computer Science Industry</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">6:30 PM</td>
+                  <td class="sat-event">Dinner</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">9:00 PM</td>
+                  <td class="sat-event">Cup Stacking!</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>*Subject to change</p>
+          </div>
+
+          <!--    SUNDAY    -->
+          <div class="col-md-12 col-lg-6" id="scheduleSun">
+            <h2>Sunday - Feburary 16</h2>
+            <button class="btn btn-secondary mx-auto d-block" id="viewSat">View Saturday</button>
+            <div class="schedule-event-div schedule-scrollbar">
+              <table class="table">
+                <thead>
+                <tr class="schedule-top-header">
+                  <th class="th-time">Time</th>
+                  <th class="th-event">Event</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr">
+                  <td class="sun-time">12:00 AM</td>
+                  <td class="sun-event">Midnight Snack</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">7:00 AM</td>
+                  <td class="sun-event">Breakfast; Submissions on Devpost</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">8:00 AM</td>
+                  <td class="sun-event">Hacking Ends</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">9:00 AM</td>
+                  <td class="sun-event">Judging</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">11:00 AM</td>
+                  <td class="sun-event">Closing Ceremony</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">12:00 PM</td>
+                  <td class="sun-event">End of Hackathon</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>*Subject to change</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TODO: Add email subscription -->
+
+  <section id="faq-section">
+    <div class="anchor" id="faq"></div>
+    <div class="content-div">
+      <h1 class="heading">FAQ</h1>
+      <!--        Copied from old website         -->
+      <div class="container-fluid" id="faq-content">
+        <div class="row">
+          <div class="col-12 block">
+            <h3>What is a hackathon?</h3>
+            <p>
+              A hackathon is a 24-hour programming marathon where your ideas
+              come to life. Over the course of the weekend, students from
+              all backgrounds and all skill levels collaborate in teams of
+              up to four to build something awesome. All participants must
+              abide by the
+              <a
+                  class="link"
+                  href="./assets/pdf/mlh-code-of-conduct.pdf"
+                  target="_blank"
+              >MLH Code of Conduct</a
+              >.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-1">
+              <h3>What if I don't know how to code?</h3>
+            </div>
+            <div id="faq-1" class="">
+              <p>
+                No worries! SM Hacks is the perfect time to learn how to
+                code and all students, regardless of skill level and
+                experience, are welcome. There will be plenty of mentors on
+                hand glad to answer any and all questions and workshops
+                specifically designed for those with no prior experience.
+                Stay tuned for more information about workshops!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-2">
+              <h3>Do I have to be in high school?</h3>
+            </div>
+            <div id="faq-2" class="">
+              <p>
+                Yes, only current high school students will be able to
+                attend. Unfortunately, we are not accepting middle school
+                students. College students are welcome to help out as
+                mentors!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-3">
+              <h3>What if I don't have a team or an idea?</h3>
+            </div>
+            <div id="faq-3" class="">
+              <p>
+                No worries! It is not uncommon for people to come into the
+                hackathon without an already-formed group, but we'll make
+                sure you're matched with the right people! We will have a
+                team formation and brainstorm session the first night so
+                everyone can find the perfect team and come up with awesome
+                ideas, so don't you worry first-time hackers!
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-4">
+              <h3>How big can teams be?</h3>
+            </div>
+            <div id="faq-4" class="">
+              <p>
+                Teams can be up to four people. While you may work as an
+                individual, we highly encourage collaborating with others.
+                If you don't have a team or need help finding one, make sure
+                not to miss our team formation and brainstorm session on
+                Saturday.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-5">
+              <h3>What should I bring?</h3>
+            </div>
+            <div id="faq-5" class="">
+              <p>
+                Attendees should bring a valid student ID or some other form
+                of identification, as well as a signed and completed waiver.
+                Bring laptops and chargers, along with any other technology
+                that you may want to use! We will have designated sleeping
+                spots so feel free to bring a sleeping bag and pillow. Also
+                it is highly suggested that you bring toiletries so you can
+                feel refreshed and beautiful!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-6">
+              <h3>How much does it cost to attend?</h3>
+            </div>
+            <div id="faq-6" class="">
+              <p>
+                Nothing! Just bring your beautiful self and ideas and we
+                will provide you with the food, WiFi, workspace, and swag!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-7">
+              <h3>How can I apply?</h3>
+            </div>
+            <div id="faq-7" class="">
+              <!-- TODO: create notification system; mailchimp?-->
+              <p>
+                Applications for hackers have not yet opened, but
+                <a class="link" href="#subscribe">click here</a> to be
+                notified as soon as you can apply!
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 block">
+            <div data-toggle="" data-target="#faq-8">
+              <h3>What if I have another question?</h3>
+            </div>
+            <div id="faq-8" class="">
+              <p>
+                Email us at
+                <a class="link" href="mailto:team@smhacks.com"
+                >team@smhacks.com</a
+                >
+                if you have any additional questions. We are always happy to
+                help!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors-head">
+    <div class="content-div">
+      <h1 class="heading">Sponsors</h1>
+      <h4>Interested in sponsoring?</h4>
+      <h4>
+        Email us at
+        <a class="link" href="mailto:sponsors@smhacks.com"
+        >sponsors@smhacks.com</a
+        >!
+      </h4>
+    </div>
+  </section>
+
+  <section id="sponsors-section">
+    <div class="anchor" id="sponsors"></div>
+    <div class="content-div"></div>
+  </section>
+
+  <section id="organizers-section">
+    <div class="anchor" id="organizers"></div>
+    <div class="content-div">
+      <h1 class="heading">Organizers</h1>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <p>Copyright &copy; SM Hacks 2019-2020. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Jquery JS, Popper JS, and Bootsrap JS Scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+    src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+    integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"
+></script>
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/schedule.js"></script>
+</body>
 </html>
