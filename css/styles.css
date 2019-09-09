@@ -298,6 +298,28 @@ section {
     background-color: var(--panel-bg-light);
 }
 
+.organizer-img-div {
+    padding: 10px;
+}
+
+.organizer-img {
+    border-radius: 50%;
+    width: 80%;
+    object-fit: scale-down;
+    box-shadow: 0 5px 10px #BBB;
+    transition: all 0.25s ease-in-out;
+    margin-bottom: 10px;
+}
+
+/* TODO: DECIDE WHETHER TO HAVE ANIMATION OR NOT */
+/*.organizer-img:hover {*/
+/*    transform: scale(1.025, 1.025);*/
+/*}*/
+
+.text-center {
+    text-align: center;
+}
+
 /* ----- FOOTER ----- */
 
 footer {
