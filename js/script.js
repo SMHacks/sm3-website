@@ -1,24 +1,42 @@
+// Smooth Scrolling Script
 $(document).ready(function(){
-  // Add smooth scrolling to all links
   $("a").on('click', function(event) {
-
-    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
-
-      // Store hash
       var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
 });
+
+// Mobile Menu Icon Rotation
+i = 1;
+$('.fas.fa-bars').click(function(){
+  elem = this;
+  
+  $({rotation: 90*!i}).animate({rotation: 90*i}, {
+    duration: 400,
+    step: function(now) {
+      $(elem).css({'transform' : 'rotate('+ now +'deg)'});
+    }
+  });
+  i=!i;
+});
+
+// NavBar Color Change with Scoll
+$(window).scroll(function() {
+  var hT = $('#about').offset().top,
+      hH = $('#about').outerHeight(),
+      wH = $(window).height(),
+      wS = $(this).scrollTop();
+  if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
+     $('nav').removeClass('scrolled')
+  } else {
+     $('nav').addClass('scrolled')
+  }
+});
+
