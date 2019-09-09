@@ -98,20 +98,21 @@
     <a class="anchor" id="schedule"></a>
     <div class="content-div">
       <h1 class="heading">Schedule</h1>
-      <div class="container-fluid">
+      <div class="container-fluid" id="schedule-wrapper">
         <div class="row">
 
           <div class="col-md-12 col-lg-6 schedule-slides">
             <div class="row">
               <div class="col-sm-12 col-md-8 schedule-content">
-                <h1 id="schedule-detail-event">Attendee Check-In</h1>
-                <h2 id="time">Saturday, 10:30 AM</h2>
-                <h2 id="location"><i class="fa fa-location-arrow"></i>TBA</h2>
+                <h2 id="schedule-detail-event">Attendee Check-In</h2>
+                <br>
+                <h4 id="time">Saturday, 10:30 AM</h4>
+                <h4 id="location"><i class="fa fa-location-arrow"></i>TBA</h4>
               </div>
 
               <div class="col-sm-12 col-md-4 nav-arrows">
-                <button class="fa fa-arrow-circle-left" onclick="stepScheduleEvent(-1)"></button>
-                <button class="fa fa-arrow-circle-right" onclick="stepScheduleEvent(1)"></button>
+                <button id="schedule-navLeft" class="fa fa-arrow-circle-left" onclick="stepScheduleEvent(-1)"></button>
+                <button id="schedule-navRight" class="fa fa-arrow-circle-right" onclick="stepScheduleEvent(1)"></button>
               </div>
             </div>
           </div>

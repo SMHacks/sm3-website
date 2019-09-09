@@ -5,6 +5,9 @@ let sunEvents = document.getElementsByClassName('sun-event');
 let tableRows = document.getElementById('schedule-section').getElementsByClassName('tr');
 let i = 0;
 
+// Initial update
+showContent();
+
 /**
  * Steps the schedule forward or backward.
  * @param n        number of events to step (positive = forward, negative = backward)
@@ -13,6 +16,8 @@ function stepScheduleEvent(n) {
 	i += n;
 	if (i < 0) {
 		i = 0;
+	} else if (i >= satTimes.length + sunTimes.length) {
+		i = satTimes.length + sunTimes.length - 1;
 	} else if (n === 1 && i < satTimes.length + sunTimes.length) {
 		tableRows[i - 1].className = tableRows[i - 1].className.replace(" active", "");
 		tableRows[i].className += " active";
@@ -33,8 +38,15 @@ function showContent() {
 		document.getElementById('schedule-detail-event').innerHTML = sunEvents[i - satEvents.length].innerHTML;
 		document.getElementById('time').innerHTML = 'Sunday, ' + sunTimes[i - satTimes.length].innerHTML;
 		viewSun();
-	} else if (i >= satTimes.length + sunTimes.length) {
-		i = satTimes.length + sunTimes.length - 1;
+	}
+
+	if (i === 0) {
+		document.getElementById('schedule-navLeft').style.visibility = 'hidden';
+	} else if (i === satTimes.length + sunTimes.length - 1) {
+		document.getElementById('schedule-navRight').style.visibility = 'hidden';
+	} else {
+		document.getElementById('schedule-navLeft').style.visibility = 'inherit';
+		document.getElementById('schedule-navRight').style.visibility = 'inherit';
 	}
 }
 
