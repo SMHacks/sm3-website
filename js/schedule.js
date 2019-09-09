@@ -6,17 +6,24 @@ var tableRows = document.getElementsByClassName('tr');
 var i = 0;
 
 function plusDivs(n) {
-	tableRows[i].className = tableRows[i].className.replace(" active", "");
-	n == -1 ? tableRows[i - 1].className += " active" : tableRows[i + 1].className += " active";
 	i += n;
+	if (i < 0) {
+		i = 0;
+	}
+	else if (n == 1 && i < satTimes.length + sunTimes.length) {
+		tableRows[i - 1].className = tableRows[i - 1].className.replace(" active", "");
+		tableRows[i].className += " active";
+		
+	}
+	else if (n == -1) {
+		tableRows[i + 1].className = tableRows[i + 1].className.replace(" active", "");
+		tableRows[i].className += " active";
+	}
 	showContent();
 }
 
 function showContent() {
-	if (i < 0) {
-		i = 0;
-	}
-	else if (i >= 0 && i < satTimes.length) {
+	if (i < satTimes.length) {
 		document.getElementById('event').innerHTML = satEvents[i].innerHTML;
 		document.getElementById('time').innerHTML = 'Saturday, ' + satTimes[i].innerHTML;
 		viewSat();
