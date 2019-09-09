@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css?family=Muli|Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Style CSS -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -99,7 +100,20 @@
           <h1 class="heading">Schedule</h1>
           <div class="container-fluid">
             <div class="row">
-              <div class="col-12" id="scheduleSat">
+              <div class="col-md-12 col-lg-6 schedule-slides">
+                <div class="row">
+                  <div class="col-sm-12 col-md-8 schedule-content">
+                  <h1 id="event">Attendee Check-In</h1>
+                  <h2 id="time">Saturday, 10:30 AM</h2>
+                  <h2 id="location"><i class="fa fa-location-arrow"></i>TBA</h2>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  <button class="fa fa-arrow-circle-left" onclick="plusDivs(-1)"></button> 
+                  <button class="fa fa-arrow-circle-right" onclick="plusDivs(1)"></button>
+                </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6" id="scheduleSat">
                 <h2>Saturday - Feburary 15</h2>
                 <button class="btn btn-secondary mx-auto d-block" id="viewSun">View Sunday</button>
                 <table>
@@ -107,50 +121,51 @@
                     <th class="top-header">Time</th>
                     <th class="top-header">Event</th>
                   </tr>
-                  <tr>
-                    <td>10:30 AM</td>
-                    <td>Attendee Check-In</td>
+                  <tr class="tr active">
+                    <td class="sat-time">10:30 AM</td>
+                    <td class="sat-event">Attendee Check-In</td>
                   </tr>
-                  <tr>
-                    <td>11:30 AM</td>
-                    <td>Opening Ceremony</td>
+                  <tr class="tr">
+                    <td class="sat-time">11:30 AM</td>
+                    <td class="sat-event">Opening Ceremony</td>
                   </tr>
-                  <tr>
-                    <td>12:00 PM</td>
-                    <td>Lunch; Hacking Begins!</td>
+                  <tr class="tr">
+                    <td class="sat-time">12:00 PM</td>
+                    <td class="sat-event">Lunch; Hacking Begins!</td>
                   </tr>
-                  <tr>
-                    <td>12:30 PM</td>
-                    <td>Team-Mixer</td>
+                  <tr class="tr">
+                    <td class="sat-time">12:30 PM</td>
+                    <td class="sat-event">Team-Mixer</td>
                   </tr>
-                  <tr>
-                    <td>1:30 PM</td>
-                    <td>Workshops Begin; <br> Scaling with ReactJS Workshop</td>
+                  <tr class="tr">
+                    <td class="sat-time">1:30 PM</td>
+                    <td class="sat-event">Workshops Begin; <br> Scaling with ReactJS Workshop</td>
                   </tr>
-                  <tr>
-                    <td>2:45 PM</td>
-                    <td>Intro to Web Development Workshop</td>
+                  <tr class="tr">
+                    <td class="sat-time">2:45 PM</td>
+                    <td class="sat-event">Intro to Web Development Workshop</td>
                   </tr>
-                  <tr>
-                    <td>3:45 PM</td>
-                    <td>Clean Code Workshop</td>
+                  <tr class="tr">
+                    <td class="sat-time">3:45 PM</td>
+                    <td class="sat-event">Clean Code Workshop</td>
                   </tr>
-                  <tr>
-                    <td>4:30 PM</td>
-                    <td>Tech Talk: The Computer Science Industry</td>
+                  <tr class="tr">
+                    <td class="sat-time">4:30 PM</td>
+                    <td class="sat-event">Tech Talk: The Computer Science Industry</td>
                   </tr>
-                  <tr>
-                    <td>6:30 PM</td>
-                    <td>Dinner</td>
+                  <tr class="tr">
+                    <td class="sat-time">6:30 PM</td>
+                    <td class="sat-event">Dinner</td>
                   </tr>
-                  <tr>
-                    <td>9:00 PM</td>
-                    <td>Cup Stacking!</td>
+                  <tr class="tr">
+                    <td class="sat-time">9:00 PM</td>
+                    <td class="sat-event">Cup Stacking!</td>
                   </tr>
                 </table>  
+                <p>*Subject to change</p>
               </div>
 
-              <div class="col-12" id="scheduleSun">
+              <div class="col-md-12 col-lg-6" id="scheduleSun">
                 <h2>Sunday - Feburary 16</h2>
                 <button class="btn btn-secondary mx-auto d-block" id="viewSat">View Saturday</button>
                 <table>
@@ -158,34 +173,34 @@
                     <th class="top-header">Time</th>
                     <th class="top-header">Event</th>
                   </tr>
-                  <tr>
-                    <td>12:00 AM</td>
-                    <td>Midnight Snack</td>
+                  <tr class="tr">
+                    <td class="sun-time">12:00 AM</td>
+                    <td class="sun-event">Midnight Snack</td>
                   </tr>
-                  <tr>
-                    <td>7:00 AM</td>
-                    <td>Breakfast; Submissions on Devpost</td>
+                  <tr class="tr">
+                    <td class="sun-time">7:00 AM</td>
+                    <td class="sun-event">Breakfast; Submissions on Devpost</td>
                   </tr>
-                  <tr>
-                    <td>8:00 AM</td>
-                    <td>Hacking Ends</td>
+                  <tr class="tr">
+                    <td class="sun-time">8:00 AM</td>
+                    <td class="sun-event">Hacking Ends</td>
                   </tr>
-                  <tr>
-                    <td>9:00 AM</td>
-                    <td>Judging</td>
+                  <tr class="tr">
+                    <td class="sun-time">9:00 AM</td>
+                    <td class="sun-event">Judging</td>
                   </tr>
-                  <tr>
-                    <td>11:00 AM</td>
-                    <td>Closing Ceremony</td>
+                  <tr class="tr">
+                    <td class="sun-time">11:00 AM</td>
+                    <td class="sun-event">Closing Ceremony</td>
                   </tr>
-                  <tr>
-                    <td>12:00 PM</td>
-                    <td>End of Hackathon</td>
+                  <tr class="tr">
+                    <td class="sun-time">12:00 PM</td>
+                    <td class="sun-event">End of Hackathon</td>
                   </tr>
                 </table>
+                <p>*Subject to change</p>
               </div>
             </div>
-            <p>*Subject to change</p>
           </div>
         </div>
       </section>
