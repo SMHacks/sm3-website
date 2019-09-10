@@ -157,6 +157,130 @@
     <a class="anchor" id="schedule"></a>
     <div class="content-div">
       <h1 class="heading">Schedule</h1>
+      <div class="container-fluid" id="schedule-wrapper">
+        <div class="row">
+
+          <div class="col-md-12 col-lg-6 schedule-slides">
+            <div class="row">
+              <div class="col-sm-12 col-md-8 schedule-content">
+                <h2 id="schedule-detail-event">Attendee Check-In</h2>
+                <br>
+                <h4 id="time">Saturday, 10:30 AM</h4>
+                <h4 id="location"><i class="fa fa-location-arrow"></i>TBA</h4>
+              </div>
+
+              <div class="col-sm-12 col-md-4 nav-arrows">
+                <button id="schedule-navLeft" class="fa fa-arrow-circle-left" onclick="stepScheduleEvent(-1)"></button>
+                <button id="schedule-navRight" class="fa fa-arrow-circle-right" onclick="stepScheduleEvent(1)"></button>
+              </div>
+            </div>
+          </div>
+
+          <!--    SATURDAY    -->
+          <div class="col-md-12 col-lg-6" id="scheduleSat">
+            <h2>Saturday - Feburary 15</h2>
+            <button class="btn btn-secondary mx-auto d-block" id="viewSun">View Sunday</button>
+            <div class="schedule-event-div schedule-scrollbar">
+              <table>
+                <thead>
+                <tr class="schedule-top-header">
+                  <th class="th-time">Time</th>
+                  <th class="th-event">Event</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr active">
+                  <td class="sat-time">10:30 AM</td>
+                  <td class="sat-event">Attendee Check-In</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">11:30 AM</td>
+                  <td class="sat-event">Opening Ceremony</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">12:00 PM</td>
+                  <td class="sat-event">Lunch; Hacking Begins!</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">12:30 PM</td>
+                  <td class="sat-event">Team-Mixer</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">1:30 PM</td>
+                  <td class="sat-event">Scaling with ReactJS Workshop</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">2:45 PM</td>
+                  <td class="sat-event">Intro to Web Development Workshop</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">3:45 PM</td>
+                  <td class="sat-event">Clean Code Workshop</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">4:30 PM</td>
+                  <td class="sat-event">Tech Talk: The Computer Science Industry</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">6:30 PM</td>
+                  <td class="sat-event">Dinner</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sat-time">9:00 PM</td>
+                  <td class="sat-event">Cup Stacking!</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>*Subject to change</p>
+          </div>
+
+          <!--    SUNDAY    -->
+          <div class="col-md-12 col-lg-6" id="scheduleSun">
+            <h2>Sunday - Feburary 16</h2>
+            <button class="btn btn-secondary mx-auto d-block" id="viewSat">View Saturday</button>
+            <div class="schedule-event-div schedule-scrollbar">
+              <table class="table">
+                <thead>
+                <tr class="schedule-top-header">
+                  <th class="th-time">Time</th>
+                  <th class="th-event">Event</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr class="tr">
+                  <td class="sun-time">12:00 AM</td>
+                  <td class="sun-event">Midnight Snack</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">7:00 AM</td>
+                  <td class="sun-event">Breakfast; Submissions on Devpost</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">8:00 AM</td>
+                  <td class="sun-event">Hacking Ends</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">9:00 AM</td>
+                  <td class="sun-event">Judging</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">11:00 AM</td>
+                  <td class="sun-event">Closing Ceremony</td>
+                </tr>
+                <tr class="tr">
+                  <td class="sun-time">12:00 PM</td>
+                  <td class="sun-event">End of Hackathon</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>*Subject to change</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -212,7 +336,7 @@
                   No worries! It is not uncommon for people to come into the
                   hackathon without an already-formed group, but we'll make
                   sure you're matched with the right people! We will have a
-                  team formation and ideation session the first night so
+                  team formation and brainstorm session the first night so
                   everyone can find the perfect team and come up with awesome
                   ideas, so don't you worry first-time hackers!
                 </p>
@@ -228,7 +352,7 @@
                   Teams can be up to four people. While you may work as an
                   individual, we highly encourage collaborating with others.
                   If you don't have a team or need help finding one, make sure
-                  not to miss our team formation and ideation session on
+                  not to miss our team formation and brainstorm session on
                   Saturday.
                 </p>
               </div>
@@ -345,31 +469,48 @@
       <h1 class="heading">Organizers</h1>
     </div>
   </section>
-</main>
-<footer>
+  </main>
+  <footer>
   <div class="container">
     <p>Copyright &copy; SM Hacks 2019-2020. All rights reserved.</p>
   </div>
-</footer>
+  </footer>
 
-<!-- Jquery JS, Popper JS, and Bootsrap JS Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script
+  <!-- Jquery JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script
     src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
     integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
     crossorigin="anonymous"
-></script>
-<script
+  ></script>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0d51adadb3.js"></script>
+
+  <!-- Popper JS -->
+  <script
     src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
     integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
     crossorigin="anonymous"
-></script>
-<script
+  ></script>
+
+  <!-- Bootstrap JS -->
+  <script
     src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
-></script>
-<script src="js/bootstrap.min.js"></script>
+  ></script>
+  <script src="js/bootstrap.min.js"></script>
 
-</body>
-</html>
+  <!-- Particle JS -->
+  <script src="js/particles.min.js"></script>
+  <script src="js/particle-script.js"></script>
+
+  <!-- Smooth Scrolling Script -->
+  <script src="js/scroll-script.js"></script>
+
+  <!-- Schedule Script -->
+  <script src="js/schedule.js"></script>
+
+  </body>
+  </html>
