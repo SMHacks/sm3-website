@@ -1,8 +1,18 @@
-let satTimes = document.getElementsByClassName('sat-time');
-let satEvents = document.getElementsByClassName('sat-event');
-let sunTimes = document.getElementsByClassName('sun-time');
-let sunEvents = document.getElementsByClassName('sun-event');
-let tableRows = document.getElementById('schedule-section').getElementsByClassName('tr');
+// Convert all HTML collections to js arrays
+let satTimes = Array.prototype.slice.call(
+    document.getElementsByClassName('sat-time'), 0);
+let satEvents = Array.prototype.slice.call(
+    document.getElementsByClassName('sat-event'), 0);
+let sunTimes = Array.prototype.slice.call(
+    document.getElementsByClassName('sun-time'), 0);
+let sunEvents = Array.prototype.slice.call(
+    document.getElementsByClassName('sun-event'), 0);
+
+let allTimes = satTimes.concat(sunTimes);
+let allEvents = satEvents.concat(sunEvents);
+let tableRows = Array.prototype.slice.call(
+    document.getElementById('schedule-section')
+        .getElementsByClassName('tr'), 0);
 let i = 0;
 
 // Initial update
@@ -16,37 +26,40 @@ function stepScheduleEvent(n) {
     i += n;
     if (i < 0) {
         i = 0;
-    } else if (i >= satTimes.length + sunTimes.length) {
-        i = satTimes.length + sunTimes.length - 1;
-    } else if (n === 1 && i < satTimes.length + sunTimes.length) {
-        tableRows[i - 1].className = tableRows[i - 1].className.replace(" active", "");
-        tableRows[i].className += " active";
-
-    } else if (n === -1) {
-        tableRows[i + 1].className = tableRows[i + 1].className.replace(" active", "");
-        tableRows[i].className += " active";
+    } else if (i >= allTimes.length) {
+        i = allTimes.length - 1;
+    } else if (i < allTimes.length) {
+        $(tableRows[i - n]).removeClass('active');
+        $(tableRows[i]).addClass('active');
     }
     showContent();
 }
 
 function showContent() {
+    // Update left panel content
+    let timePrefix;
     if (i < satTimes.length) {
-        document.getElementById('schedule-detail-event').innerHTML = satEvents[i].innerHTML;
-        document.getElementById('time').innerHTML = 'Saturday, ' + satTimes[i].innerHTML;
+        timePrefix = 'Saturday, ';
         viewSat();
     } else if (i >= satTimes.length && i < satTimes.length + sunTimes.length) {
-        document.getElementById('schedule-detail-event').innerHTML = sunEvents[i - satEvents.length].innerHTML;
-        document.getElementById('time').innerHTML = 'Sunday, ' + sunTimes[i - satTimes.length].innerHTML;
+        timePrefix = 'Sunday, ';
         viewSun();
     }
 
+    document.getElementById('schedule-detail-event').innerHTML = allEvents[i].innerHTML;
+    document.getElementById('time').innerHTML = timePrefix + allTimes[i].innerHTML;
+
+    // Remove left/right arrow if at the start/end of schedule
+    let navLeft = document.getElementById('schedule-navLeft');
+    let navRight = document.getElementById('schedule-navRight');
+
     if (i === 0) {
-        document.getElementById('schedule-navLeft').style.visibility = 'hidden';
+        navLeft.style.visibility = 'hidden';
     } else if (i === satTimes.length + sunTimes.length - 1) {
-        document.getElementById('schedule-navRight').style.visibility = 'hidden';
+        navRight.style.visibility = 'hidden';
     } else {
-        document.getElementById('schedule-navLeft').style.visibility = 'inherit';
-        document.getElementById('schedule-navRight').style.visibility = 'inherit';
+        navLeft.style.visibility = 'inherit';
+        navRight.style.visibility = 'inherit';
     }
 }
 
@@ -63,20 +76,26 @@ function viewSat() {
 /**
  * Initializes schedule and active elements.
  */
-$(document).ready(function () {
-    $('#scheduleSun').hide();
-    $('#viewSun').click(function () {
-        viewSun();
-        tableRows[i].className = tableRows[i].className.replace(" active", "");
-        i = satTimes.length;
-        tableRows[i].className += " active";
-        showContent();
-    });
-    $('#viewSat').click(function () {
-        viewSat();
-        tableRows[i].className = tableRows[i].className.replace(" active", "");
-        i = 0;
-        tableRows[i].className += " active";
-        showContent();
-    });
+
+$('#viewSun').click(function () {
+    viewSun();
+    tableRows[i].className = tableRows[i].className.replace(" active", "");
+    i = satTimes.length;
+    tableRows[i].className += " active";
+    showContent();
+});
+$('#viewSat').click(function () {
+    viewSat();
+    tableRows[i].className = tableRows[i].className.replace(" active", "");
+    i = 0;
+    tableRows[i].className += " active";
+    showContent();
+});
+
+$('.schedule-event-div .tr').click(function () {
+    // Remove prev active and set clicked to active
+    $(tableRows[i]).removeClass('active');
+    i = tableRows.findIndex(curRow => $(this).is(curRow));
+    $(tableRows[i]).addClass('active');
+    showContent();
 });

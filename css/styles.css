@@ -330,6 +330,10 @@ section {
     color: #FD9845 !important;
 }
 
+#schedule-section .tr {
+    cursor: pointer;
+}
+
 #schedule-section #time, #schedule-section #location {
     text-align: left;
 }
