@@ -256,9 +256,8 @@ section {
 }
 
 #schedule-section .btn:hover {
-  background: rgb(228,92,77);
-  background: linear-gradient(90deg, rgba(228,92,77,1) 0%, rgba(249,117,62,1) 30%, rgba(249,211,124,1) 74%);
-      color: white;
+    background: transparent;
+    color: #a6a6a6;
 }
 
 #schedule-section .fa-location-arrow {
