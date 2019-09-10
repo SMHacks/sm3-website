@@ -47,6 +47,21 @@ a, a:visited, a:link {
     font-size: 1.5em;
 }
 
+<<<<<<< Updated upstream
+=======
+#nav .nav-item .nav-link {
+    color: #c5c3c3;
+}
+
+#nav .nav-item:hover .nav-link {
+    background: rgb(226,61,44);
+    background: -webkit-linear-gradient(0deg, rgba(226,61,44,1) 12%, rgba(253,106,29,1) 41%, rgba(252,196,69,1) 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+>>>>>>> Stashed changes
 #nav {
     background-color: var(--panel-bg-light);
     position: fixed;
@@ -76,6 +91,9 @@ section {
 
 .heading {
     margin-bottom: 20px;
+    background: -webkit-linear-gradient(0deg, rgba(226,61,44,1) 0%, rgba(253,106,29,1) 10%, rgba(252,196,69,1) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ----- TOP ----- */
@@ -189,6 +207,124 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
+<<<<<<< Updated upstream
+=======
+#schedule-wrapper {
+    background: var(--panel-bg-light);
+    border-radius: 25px;
+    margin-top: 50px;
+    padding: 40px;
+}
+
+#schedule-section th, #schedule-section td {
+    color: #000;
+    padding: 10px;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+#schedule-section tbody tr:not(.active):hover {
+    background: #E0E0E0;
+}
+
+#schedule-section table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
+
+.sat-time, .sun-time, .th-time {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.sat-event, .sun-event, .th-event {
+    text-align: left;
+}
+
+#schedule-section .btn {
+    margin-bottom: 20px;
+    width: 80%;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid rgba(253,106,29,1);
+    border-radius: 15px;
+    color: rgba(253,106,29,1);
+}
+
+#schedule-section .btn:hover {
+    background: rgb(226,61,44);
+    background: linear-gradient(90deg, rgba(226,61,44,1) 12%, rgba(253,106,29,1) 41%, rgba(252,196,69,1) 78%);
+    /* pink
+    background: rgb(226,44,115);
+    background: linear-gradient(90deg, rgba(226,44,115,1) 0%, rgba(253,107,29,1) 44%, rgba(252,196,69,1) 78%); */
+
+    color: white;
+}
+
+#schedule-section .fa-location-arrow {
+    margin-right: 10px;
+}
+
+.nav-arrows {
+    user-select: none;
+}
+
+#schedule-section .fa-arrow-circle-left, #schedule-section .fa-arrow-circle-right {
+    position: relative;
+    border: none;
+    background: transparent;
+    font-size: 35px;
+    outline: none;
+    margin: 30px 0;
+}
+
+#schedule-section .fa-arrow-circle-left:hover, #schedule-section .fa-arrow-circle-right:hover {
+    color: #FD9845 !important;
+}
+
+#schedule-section #time, #schedule-section #location {
+    text-align: left;
+}
+
+#scheduleSat .schedule-event-div {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.schedule-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.schedule-scrollbar::-webkit-scrollbar-track {
+    background: #FAC8A2;
+    border-radius: 10px;
+}
+
+.schedule-scrollbar::-webkit-scrollbar-thumb {
+    background: #FD9845;
+    border-radius: 10px;
+}
+
+#schedule-section .active {
+    background: #d9d9d9;
+}
+
+#schedule-section h2:not(#schedule-detail-event) {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#schedule-section p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+>>>>>>> Stashed changes
 /* ----- FAQ ----- */
 
 #faq-section {
