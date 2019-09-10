@@ -207,8 +207,6 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
-<<<<<<< Updated upstream
-=======
 #schedule-wrapper {
     background: var(--panel-bg-light);
     border-radius: 25px;
@@ -248,20 +246,15 @@ section {
     margin-bottom: 20px;
     width: 80%;
     font-size: 16px;
-    background: transparent;
-    border: 2px solid rgba(253,106,29,1);
+    background: #a6a6a6;
+    border: 2px solid #a6a6a6;
     border-radius: 15px;
-    color: rgba(253,106,29,1);
+    color: white;
 }
 
 #schedule-section .btn:hover {
-    background: rgb(226,61,44);
-    background: linear-gradient(90deg, rgba(226,61,44,1) 12%, rgba(253,106,29,1) 41%, rgba(252,196,69,1) 78%);
-    /* pink
-    background: rgb(226,44,115);
-    background: linear-gradient(90deg, rgba(226,44,115,1) 0%, rgba(253,107,29,1) 44%, rgba(252,196,69,1) 78%); */
-
-    color: white;
+    background: transparent;
+    color: #a6a6a6;
 }
 
 #schedule-section .fa-location-arrow {
@@ -324,7 +317,6 @@ section {
     margin-top: 20px;
 }
 
->>>>>>> Stashed changes
 /* ----- FAQ ----- */
 
 #faq-section {
