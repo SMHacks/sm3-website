@@ -266,6 +266,9 @@ section {
 
 .nav-arrows {
     user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 #schedule-section .fa-arrow-circle-left, #schedule-section .fa-arrow-circle-right {
@@ -290,20 +293,6 @@ section {
     overflow-y: auto;
 }
 
-.schedule-scrollbar::-webkit-scrollbar {
-    width: 5px;
-}
-
-.schedule-scrollbar::-webkit-scrollbar-track {
-    background: #FAC8A2;
-    border-radius: 10px;
-}
-
-.schedule-scrollbar::-webkit-scrollbar-thumb {
-    background: #FD9845;
-    border-radius: 10px;
-}
-
 #schedule-section .active {
     background: #d9d9d9;
 }
@@ -318,6 +307,27 @@ section {
     text-align: center;
     font-size: 18px;
     margin-top: 20px;
+}
+
+/* Scrollbar - Chrome/Safari */
+.schedule-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.schedule-scrollbar::-webkit-scrollbar-track {
+    background: #FAC8A2;
+    border-radius: 10px;
+}
+
+.schedule-scrollbar::-webkit-scrollbar-thumb {
+    background: #FD9845;
+    border-radius: 10px;
+}
+
+/* Scrollbar - Firefox */
+.schedule-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #FD9845 #FAC8A2;
 }
 
 /* ----- FAQ ----- */
