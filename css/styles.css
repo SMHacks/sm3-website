@@ -329,6 +329,23 @@ footer {
     text-align: center;
 }
 
+/* ---- SCROLL-TO-TOP BUTTON ---- */
+/*#top-button {*/
+/*    position: fixed;*/
+/*    bottom: 35px;*/
+/*    right: 35px;*/
+/*    background: var(--bg-grey);*/
+/*    color: var(--panel-bg-light);*/
+/*    opacity: 0.9;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    display: block;*/
+/*    border-radius: 50px;*/
+/*    z-index: 9999;*/
+/*    text-align: center;*/
+/*    padding-top: 12px;*/
+/*}*/
+
 /* ---- MEDIA QUERIES ---- */
 
 /* Extra small devices (portrait phones, less than 576px)
