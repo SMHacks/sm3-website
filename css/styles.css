@@ -55,7 +55,7 @@ a, a:visited, a:link {
 
 #nav .nav-item:hover .nav-link {
     background: rgb(226,61,44);
-    background: -webkit-linear-gradient(0deg, rgba(226,61,44,1) 12%, rgba(253,106,29,1) 41%, rgba(252,196,69,1) 78%);
+    background: -webkit-linear-gradient(0deg, rgba(228,92,77,1) 0%, rgba(249,117,62,1) 30%, rgba(249,211,124,1) 74%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -246,15 +246,16 @@ section {
     margin-bottom: 20px;
     width: 80%;
     font-size: 16px;
-    background: #a6a6a6;
-    border: 2px solid #a6a6a6;
+    background: transparent;
+    border: 2px solid rgba(253,106,29,1);
     border-radius: 15px;
-    color: white;
+    color: rgba(253,106,29,1);
 }
 
 #schedule-section .btn:hover {
-    background: transparent;
-    color: #a6a6a6;
+    background: rgb(228,92,77);
+    background: linear-gradient(90deg, rgba(228,92,77,1) 0%, rgba(249,117,62,1) 30%, rgba(249,211,124,1) 74%);
+    color: white;
 }
 
 #schedule-section .fa-location-arrow {
