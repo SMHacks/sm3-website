@@ -23,7 +23,15 @@ TODO:
 */
 
 body, footer {
+    width: 100%;
     background-color: var(--panel-bg-light);
+}
+
+/* Prevent scrollbar on body from disappearing when modal appears */
+.modal-open {
+    position: fixed;
+    overflow-y: scroll;
+    padding-right: 0 !important;
 }
 
 .content-div {
@@ -191,6 +199,11 @@ section {
     padding: 10px;
 }
 
+.gallery-img-div .gallery-modal-toggle {
+    padding: 0;
+    margin: 0;
+}
+
 .gallery-img {
     border-radius: 10px;
     width: 100%;
@@ -201,6 +214,39 @@ section {
 
 .gallery-img:hover {
     transform: scale(1.025, 1.025);
+}
+
+#modal-gallery-img {
+    animation-duration: 0.25s;
+}
+
+#modal-gallery-img .modal-content {
+    background: transparent;
+    border: none;
+}
+
+#modal-gallery-img .modal-dialog {
+    height: auto;
+    width: auto;
+}
+
+#modal-gallery-img .modal-body {
+    padding: 0;
+}
+
+#modal-gallery-img img {
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+
+.modal-backdrop {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.modal-backdrop.show {
+    opacity: 0.6;
 }
 
 

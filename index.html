@@ -7,13 +7,16 @@
 
   <link rel="icon" href="assets/img/logo.ico"/>
 
+  <!--  Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
   <!-- Bootstrap CSS -->
   <link
       rel="stylesheet"
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   />
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <!--  <link rel="stylesheet" href="css/bootstrap.min.css"/>-->
 
   <!-- Fonts -->
   <link
@@ -27,7 +30,7 @@
 
 <body>
 <main>
-  <nav class="navbar navbar-expand-lg bg-navbar" id="nav">
+  <nav class="navbar navbar-expand-lg bg-navbar flex-column flex-md-row" id="nav">
     <div class="container">
       <a class="navbar-brand" href="#top"><i>SM</i></a>
       <button
@@ -109,48 +112,82 @@
     <div class="content-div">
       <h1 class="heading">Gallery</h1>
       <div id="gallery-div">
-        <!--
-          TODO: downsize images for production
-            current original size images take too long to load
-         -->
         <div class="row">
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/judging1.jpg" alt="judging1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/downtime1-sm.jpg"
+                   alt="downtime1-sm">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/snacks1.jpg" alt="snacks1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/food1-sm.jpg" alt="snacks1">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/staff1.jpg" alt="staff1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/judging1-sm.jpg" alt="staff1">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working1.jpg" alt="working1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/working1-sm.jpg" alt="working1">
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working2.jpg" alt="working2">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/judging2-sm.jpg" alt="working2">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working3.jpg" alt="working3">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/working2-sm.jpg" alt="working3">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working4.jpg" alt="working4">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/food2-sm.jpg" alt="working4">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working5.jpg" alt="working5">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/downtime2-sm.jpg" alt="working5">
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="modal-gallery-img" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="img-fluid"
+                 src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <section id="schedule-section">
@@ -495,12 +532,15 @@
 ></script>
 
 <!-- Bootstrap JS -->
-<script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-></script>
+<!--<script-->
+<!--    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--    crossorigin="anonymous"-->
+<!--&gt;</script>-->
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Modal Script -->
+<script src="js/modal-script.js"></script>
 
 <!-- Particle JS -->
 <script src="js/particles.min.js"></script>
