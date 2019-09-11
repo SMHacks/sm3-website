@@ -367,7 +367,7 @@ section {
     text-align: left;
 }
 
-#scheduleSat .schedule-event-div {
+#scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div {
     max-height: 350px;
     overflow-y: auto;
 }
@@ -382,10 +382,14 @@ section {
     margin-bottom: 30px;
 }
 
-#schedule-section p {
+.schedule-footer {
+    padding-top: 20px;
+}
+
+.schedule-footer * {
     text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
+    font-size: medium;
+    margin: 10px 0;
 }
 
 /* Scrollbar - Chrome/Safari */

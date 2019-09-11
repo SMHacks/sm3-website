@@ -1,101 +1,78 @@
-// Convert all HTML collections to js arrays
-let satTimes = Array.prototype.slice.call(
-    document.getElementsByClassName('sat-time'), 0);
-let satEvents = Array.prototype.slice.call(
-    document.getElementsByClassName('sat-event'), 0);
-let sunTimes = Array.prototype.slice.call(
-    document.getElementsByClassName('sun-time'), 0);
-let sunEvents = Array.prototype.slice.call(
-    document.getElementsByClassName('sun-event'), 0);
+createSchedule();
 
-let allTimes = satTimes.concat(sunTimes);
-let allEvents = satEvents.concat(sunEvents);
-let tableRows = Array.prototype.slice.call(
-    document.getElementById('schedule-section')
-        .getElementsByClassName('tr'), 0);
-let i = 0;
+function createSchedule() {
+    let satBody = document.getElementById('scheduleSat')
+        .getElementsByTagName('tbody')[0];
+    let sunBody = document.getElementById('scheduleSun')
+        .getElementsByTagName('tbody')[0];
 
-// Initial update
-showContent();
+    schedule_data.sat = schedule_data.sat.sort((a, b) => a.start - b.start);
+    schedule_data.sun = schedule_data.sun.sort((a, b) => a.start - b.start);
 
-/**
- * Steps the schedule forward or backward.
- * @param n        number of events to step (positive = forward, negative = backward)
- */
-function stepScheduleEvent(n) {
-    i += n;
-    if (i < 0) {
-        i = 0;
-    } else if (i >= allTimes.length) {
-        i = allTimes.length - 1;
-    } else if (i < allTimes.length) {
-        $(tableRows[i - n]).removeClass('active');
-        $(tableRows[i]).addClass('active');
-    }
-    showContent();
+    schedule_data.sat.forEach((event, index) => {
+        addRow(satBody, 'sat', event, index);
+    });
+
+    schedule_data.sun.forEach((event, index) => {
+        addRow(sunBody, 'sun', event, index);
+    });
 }
 
-function showContent() {
-    // Update left panel content
-    let timePrefix;
-    if (i < satTimes.length) {
-        timePrefix = 'Saturday, ';
-        viewSat();
-    } else if (i >= satTimes.length && i < satTimes.length + sunTimes.length) {
-        timePrefix = 'Sunday, ';
-        viewSun();
-    }
+function addRow(tableBody, dayAbbrev, scheduleEvent, scheduleIndex) {
+    let startTime = scheduleEvent.start.format('h:mm A');
 
-    document.getElementById('schedule-detail-event').innerHTML = allEvents[i].innerHTML;
-    document.getElementById('time').innerHTML = timePrefix + allTimes[i].innerHTML;
+    let row = document.createElement('tr');
+    $(row).addClass('tr');
+    $(row).attr('id', `schedule-data-${dayAbbrev}-${scheduleIndex}`);
+    $(row).attr('tabindex', -1);
 
-    // Remove left/right arrow if at the start/end of schedule
-    let navLeft = document.getElementById('schedule-navLeft');
-    let navRight = document.getElementById('schedule-navRight');
+    let rowTime = document.createElement('td');
+    $(rowTime).addClass(`${dayAbbrev}-time`);
+    rowTime.innerText = startTime;
+    row.appendChild(rowTime);
 
-    if (i === 0) {
-        navLeft.style.visibility = 'hidden';
-    } else if (i === satTimes.length + sunTimes.length - 1) {
-        navRight.style.visibility = 'hidden';
+    let rowEvent = document.createElement('td');
+    $(rowEvent).addClass(`${dayAbbrev}-event`);
+    rowEvent.innerText = scheduleEvent.title;
+    row.appendChild(rowEvent);
+
+    tableBody.appendChild(row);
+}
+
+$('#scheduleSat .tr').popover({
+    container: 'body',
+    trigger: 'focus',
+    placement: 'right',
+    html: true,
+    content: getPopoverHTML
+});
+
+$('#scheduleSun .tr').popover({
+    container: 'body',
+    trigger: 'focus',
+    placement: 'left',
+    html: true,
+    content: getPopoverHTML
+});
+
+function getPopoverHTML() {
+    console.log(this);
+    let cur_id = $(this).attr('id').split('-');
+    let cur_eventData = schedule_data[cur_id[2]][Number.parseInt(cur_id[3])];
+
+    let timeString = cur_eventData.start.format('dddd h:mm A');
+
+    if (cur_eventData.start.isSame(cur_eventData.end, 'minute')) {
+        // Add nothing
+    } else if (cur_eventData.start.isSame(cur_eventData.end, 'day')) {
+        timeString += ' - ' + cur_eventData.end.format('h:mm A');
     } else {
-        navLeft.style.visibility = 'inherit';
-        navRight.style.visibility = 'inherit';
+        timeString += ' - ' + cur_eventData.end.format('dddd h:mm A');
     }
+
+    return `
+    <h6>${cur_eventData.title}</h6>
+    <p><i>${timeString}</i></p>
+    <div class="schedule-popover-info">${cur_eventData.info}</div>
+    `
 }
-
-function viewSun() {
-    $('#scheduleSun').show();
-    $('#scheduleSat').hide();
-}
-
-function viewSat() {
-    $('#scheduleSun').hide();
-    $('#scheduleSat').show();
-}
-
-/**
- * Initializes schedule and active elements.
- */
-
-$('#viewSun').click(function () {
-    viewSun();
-    tableRows[i].className = tableRows[i].className.replace(" active", "");
-    i = satTimes.length;
-    tableRows[i].className += " active";
-    showContent();
-});
-$('#viewSat').click(function () {
-    viewSat();
-    tableRows[i].className = tableRows[i].className.replace(" active", "");
-    i = 0;
-    tableRows[i].className += " active";
-    showContent();
-});
-
-$('.schedule-event-div .tr').click(function () {
-    // Remove prev active and set clicked to active
-    $(tableRows[i]).removeClass('active');
-    i = tableRows.findIndex(curRow => $(this).is(curRow));
-    $(tableRows[i]).addClass('active');
-    showContent();
-});
