@@ -34,6 +34,11 @@ body, footer {
     padding-right: 0 !important;
 }
 
+.modal {
+    padding-right: 0 !important;
+    overflow: hidden !important;
+}
+
 .content-div {
     margin: auto;
     max-width: 1050px;
@@ -218,6 +223,10 @@ section {
 
 #modal-gallery-img {
     animation-duration: 0.25s;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 #modal-gallery-img .modal-content {
@@ -239,6 +248,26 @@ section {
     border-radius: 15px;
 }
 
+#modal-gallery-next, #modal-gallery-prev {
+    position: fixed;
+    padding: 0 25px;
+    font-size: 36pt;
+    color: white;
+    text-shadow: none;
+    transition: text-shadow 0.25s ease;
+}
+
+#modal-gallery-prev-div, #modal-gallery-next-div {
+    transform: translateY(50%);
+}
+
+#modal-gallery-prev {
+    transform: translateX(-100%);
+}
+
+#modal-gallery-next:hover, #modal-gallery-prev:hover {
+    text-shadow: 0 0 10px var(--panel-bg-light);
+}
 
 .modal-backdrop {
     opacity: 0;
