@@ -132,9 +132,13 @@ section {
 }
 
 #title-text {
-    font-size: 7vw;
+    font-size: 8vw;
     font-weight: bold;
     font-style: italic;
+}
+
+.top-info {
+    font-size: 4vw;
 }
 
 #logo-div {
@@ -156,12 +160,6 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
-#about-text, #about-img-div {
-    margin: 0 20px;
-    width: 50%;
-    padding: 25px;
-}
-
 #about-text {
     border-radius: 3px;
     /*background-color: var(--panel-bg-dark);*/
@@ -170,13 +168,13 @@ section {
 #about-img-div {
     /*border-radius: 10px;*/
     /*background-color: var(--panel-bg-dark);*/
-    padding: 0;
+    display: none;
+    padding: 35px;
     position: relative;
-
 }
 
 #about-img {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -290,7 +288,12 @@ section {
 }
 
 #scheduleSat .schedule-event-div {
-    max-height: 350px;
+    max-height: none;
+    overflow-y: auto;
+}
+
+#scheduleSun .schedule-event-div {
+    max-height: none;
     overflow-y: auto;
 }
 
@@ -343,7 +346,7 @@ section {
     border-radius: 15px;
     background-color: var(--panel-bg-dark);
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     transition: transform 0.25s ease-in-out;
 }
 
@@ -366,7 +369,7 @@ section {
 }
 
 .faq-container:hover, .faq-top-container:hover {
-    transform: scale(1.005, 1.005);
+    transform: scale(1.0048, 1.0048);
 }
 
 .faq-container:hover::after, .faq-top-container:hover::after {
@@ -382,7 +385,7 @@ section {
 }
 
 .faq-flexbox {
-    width: 50%;
+    width: 100%;
     margin: 0 5px;
 }
 
@@ -464,10 +467,16 @@ footer {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     #scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div {
-        max-height: none;
+        max-height: 350px;
         overflow-y: auto;
+    }
+    #about-img-div {
+        display: block;
+    }
+    .faq-container {
+        margin: 10px 0;
     }
 }
 
