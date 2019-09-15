@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
+h2{
+  color:white;
+}
+
 p {
     font-family: "Open Sans", sans-serif;
 }
@@ -120,11 +124,13 @@ section {
 
 .heading {
     margin-bottom: 20px;
-    background: -o-linear-gradient(0deg, rgba(226, 61, 44, 1) 0%, rgba(253, 106, 29, 1) 10%, rgba(252, 196, 69, 1) 70%);
+    /* background: -o-linear-gradient(0deg, rgba(226, 61, 44, 1) 0%, rgba(253, 106, 29, 1) 10%, rgba(252, 196, 69, 1) 70%);
     background: -moz-linear-gradient(0deg, rgba(226, 61, 44, 1) 0%, rgba(253, 106, 29, 1) 10%, rgba(252, 196, 69, 1) 70%);
     background: -webkit-linear-gradient(0deg, rgba(226,61,44,1) 0%, rgba(253,106,29,1) 10%, rgba(252,196,69,1) 70%);
     background: linear-gradient(0deg, rgba(226, 61, 44, 1) 0%, rgba(253, 106, 29, 1) 10%, rgba(252, 196, 69, 1) 70%);
-    -webkit-background-clip: text;
+    background: rgb(222,88,71); */
+    background: rgb(255,89,36);
+    background: linear-gradient(0deg, rgba(255,89,36,1) 0%, rgba(255,144,36,1) 56%, rgba(255,203,122,1) 82%);    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -302,14 +308,16 @@ section {
 }
 
 #schedule-wrapper {
-    background: var(--panel-bg-light);
+    /* background: var(--panel-bg-light); */
+    background: linear-gradient(180deg, rgba(255,89,36,0.6909138655462185) 0%, rgba(255,144,36,0.7609418767507002) 56%, rgba(255,203,122,0.68531162464986) 82%);
     border-radius: 25px;
     margin-top: 50px;
     padding: 40px;
 }
 
 #schedule-section th, #schedule-section td {
-    color: #000;
+    color: black;
+    opacity:1;
     padding: 10px;
     font-size: 18px;
     vertical-align: middle;
@@ -423,7 +431,7 @@ section {
 }
 
 .schedule-scrollbar::-webkit-scrollbar-thumb {
-    background: #FD9845;
+    background: #ff6e2d;
     border-radius: 10px;
 }
 
