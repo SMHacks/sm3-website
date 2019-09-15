@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SM Hacks III</title>
 
   <link rel="icon" href="assets/img/logo.ico"/>
+
+  <!--  Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
   <!-- Bootstrap CSS -->
   <link
@@ -13,7 +16,7 @@
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
   />
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <!--  <link rel="stylesheet" href="css/bootstrap.min.css"/>-->
 
   <!-- Fonts -->
   <link
@@ -27,7 +30,7 @@
 
 <body>
 <main>
-  <nav class="navbar navbar-expand-lg bg-navbar" id="nav">
+  <nav class="navbar navbar-expand-lg bg-navbar flex-column flex-md-row" id="nav">
     <div class="container">
       <a class="navbar-brand" href="#top"><i>SM</i></a>
       <button
@@ -109,48 +112,97 @@
     <div class="content-div">
       <h1 class="heading">Gallery</h1>
       <div id="gallery-div">
-        <!--
-          TODO: downsize images for production
-            current original size images take too long to load
-         -->
         <div class="row">
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/judging1.jpg" alt="judging1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/downtime1-sm.jpg"
+                   alt="downtime1">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/snacks1.jpg" alt="snacks1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/food1-sm.jpg"
+                   alt="food1">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/staff1.jpg" alt="staff1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/judging1-sm.jpg"
+                   alt="judging1">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working1.jpg" alt="working1">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/working1-sm.jpg"
+                   alt="working1">
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working2.jpg" alt="working2">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/judging2-sm.jpg"
+                   alt="judging2">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working3.jpg" alt="working3">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/working2-sm.jpg"
+                   alt="working2">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working4.jpg" alt="working4">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/food2-sm.jpg"
+                   alt="food2">
+            </div>
           </div>
           <div class="col-3 gallery-img-div">
-            <img class="img-fluid gallery-img"
-                 src="assets/img/gallery/working5.jpg" alt="working5">
+            <div class="gallery-modal-toggle btn"
+                 data-toggle="modal" data-target="#modal-gallery-img">
+              <img class="img-fluid gallery-img"
+                   src="assets/img/gallery/downtime2-sm.jpg"
+                   alt="downtime2">
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="modal-gallery-img" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <div class="d-inline-flex">
+              <div id="modal-gallery-prev-div">
+                <span id="modal-gallery-prev" class="fas fa-angle-left"></span>
+              </div>
+              <img class="img-fluid"
+                   src="" alt="gallery-img-lg">
+              <div id="modal-gallery-next-div">
+                <span id="modal-gallery-next" class="fas fa-angle-right"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <section id="schedule-section">
@@ -159,87 +211,9 @@
       <h1 class="heading">Schedule</h1>
       <div class="container-fluid" id="schedule-wrapper">
         <div class="row">
-
-          <div class="col-md-12 col-lg-6 schedule-slides">
-            <div class="row">
-              <div class="col-sm-12 col-md-8 schedule-content">
-                <h2 id="schedule-detail-event">Attendee Check-In</h2>
-                <br>
-                <h4 id="time">Saturday, 10:30 AM</h4>
-                <h4 id="location"><i class="fa fa-location-arrow"></i>TBA</h4>
-              </div>
-
-              <div class="col-sm-12 col-md-4 nav-arrows">
-                <button id="schedule-navLeft" class="fa fa-arrow-circle-left" onclick="stepScheduleEvent(-1)"></button>
-                <button id="schedule-navRight" class="fa fa-arrow-circle-right" onclick="stepScheduleEvent(1)"></button>
-              </div>
-            </div>
-          </div>
-
           <!--    SATURDAY    -->
           <div class="col-md-12 col-lg-6" id="scheduleSat">
             <h2>Saturday - Feburary 15</h2>
-            <button class="btn btn-secondary mx-auto d-block" id="viewSun">View Sunday</button>
-            <div class="schedule-event-div schedule-scrollbar">
-              <table>
-                <thead>
-                <tr class="schedule-top-header">
-                  <th class="th-time">Time</th>
-                  <th class="th-event">Event</th>
-                </tr>
-                </thead>
-
-                <tbody>
-                <tr class="tr active">
-                  <td class="sat-time">10:30 AM</td>
-                  <td class="sat-event">Attendee Check-In</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">11:30 AM</td>
-                  <td class="sat-event">Opening Ceremony</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">12:00 PM</td>
-                  <td class="sat-event">Lunch; Hacking Begins!</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">12:30 PM</td>
-                  <td class="sat-event">Team-Mixer</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">1:30 PM</td>
-                  <td class="sat-event">Scaling with ReactJS Workshop</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">2:45 PM</td>
-                  <td class="sat-event">Intro to Web Development Workshop</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">3:45 PM</td>
-                  <td class="sat-event">Clean Code Workshop</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">4:30 PM</td>
-                  <td class="sat-event">Tech Talk: The Computer Science Industry</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">6:30 PM</td>
-                  <td class="sat-event">Dinner</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sat-time">9:00 PM</td>
-                  <td class="sat-event">Cup Stacking!</td>
-                </tr>
-                </tbody>
-              </table>
-            </div>
-            <p>*Subject to change</p>
-          </div>
-
-          <!--    SUNDAY    -->
-          <div class="col-md-12 col-lg-6" id="scheduleSun">
-            <h2>Sunday - Feburary 16</h2>
-            <button class="btn btn-secondary mx-auto d-block" id="viewSat">View Saturday</button>
             <div class="schedule-event-div schedule-scrollbar">
               <table class="table">
                 <thead>
@@ -248,37 +222,29 @@
                   <th class="th-event">Event</th>
                 </tr>
                 </thead>
-
-                <tbody>
-                <tr class="tr">
-                  <td class="sun-time">12:00 AM</td>
-                  <td class="sun-event">Midnight Snack</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sun-time">7:00 AM</td>
-                  <td class="sun-event">Breakfast; Submissions on Devpost</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sun-time">8:00 AM</td>
-                  <td class="sun-event">Hacking Ends</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sun-time">9:00 AM</td>
-                  <td class="sun-event">Judging</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sun-time">11:00 AM</td>
-                  <td class="sun-event">Closing Ceremony</td>
-                </tr>
-                <tr class="tr">
-                  <td class="sun-time">12:00 PM</td>
-                  <td class="sun-event">End of Hackathon</td>
-                </tr>
-                </tbody>
+                <tbody></tbody>
               </table>
             </div>
-            <p>*Subject to change</p>
           </div>
+          <!--    SUNDAY    -->
+          <div class="col-md-12 col-lg-6" id="scheduleSun">
+            <h2>Sunday - Feburary 16</h2>
+            <div class="schedule-event-div schedule-scrollbar">
+              <table class="table">
+                <thead>
+                <tr class="schedule-top-header">
+                  <th class="th-time">Time</th>
+                  <th class="th-event">Event</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="schedule-footer">
+          <p><i>Click on an event to view more details.</i></p>
+          <p>Events subject to change.</p>
         </div>
       </div>
     </div>
@@ -492,12 +458,19 @@
 ></script>
 
 <!-- Bootstrap JS -->
-<script
-    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"
-></script>
+<!--<script-->
+<!--    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"-->
+<!--    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"-->
+<!--    crossorigin="anonymous"-->
+<!--&gt;</script>-->
 <script src="js/bootstrap.min.js"></script>
+
+<!-- Modal Script -->
+<script src="js/modal-script.js"></script>
+
+<!-- Moment.js Library -->
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="js/moment.min.js"></script>
 
 <!-- Particle JS -->
 <script src="js/particles.min.js"></script>
@@ -507,6 +480,7 @@
 <script src="js/scroll-script.js"></script>
 
 <!-- Schedule Script -->
+<script src="js/schedule-data.js"></script>
 <script src="js/schedule.js"></script>
 
 </body>
