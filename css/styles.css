@@ -23,7 +23,20 @@ TODO:
 */
 
 body, footer {
+    width: 100%;
     background-color: var(--panel-bg-light);
+}
+
+/* Prevent scrollbar on body from disappearing when modal appears */
+.modal-open {
+    position: fixed;
+    overflow-y: scroll;
+    padding-right: 0 !important;
+}
+
+.modal {
+    padding-right: 0 !important;
+    overflow: hidden !important;
 }
 
 .content-div {
@@ -195,6 +208,11 @@ section {
     padding: 10px;
 }
 
+.gallery-img-div .gallery-modal-toggle {
+    padding: 0;
+    margin: 0;
+}
+
 .gallery-img {
     border-radius: 10px;
     width: 100%;
@@ -205,6 +223,63 @@ section {
 
 .gallery-img:hover {
     transform: scale(1.025, 1.025);
+}
+
+#modal-gallery-img {
+    animation-duration: 0.25s;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#modal-gallery-img .modal-content {
+    background: transparent;
+    border: none;
+}
+
+#modal-gallery-img .modal-dialog {
+    height: auto;
+    width: auto;
+}
+
+#modal-gallery-img .modal-body {
+    padding: 0;
+}
+
+#modal-gallery-img img {
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+#modal-gallery-next, #modal-gallery-prev {
+    position: fixed;
+    padding: 0 25px;
+    font-size: 36pt;
+    color: white;
+    text-shadow: none;
+    transition: text-shadow 0.25s ease;
+}
+
+#modal-gallery-prev-div, #modal-gallery-next-div {
+    transform: translateY(50%);
+}
+
+#modal-gallery-prev {
+    transform: translateX(-100%);
+}
+
+#modal-gallery-next:hover, #modal-gallery-prev:hover {
+    text-shadow: 0 0 10px var(--panel-bg-light);
+}
+
+.modal-backdrop {
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.modal-backdrop.show {
+    opacity: 0.6;
 }
 
 
@@ -270,6 +345,9 @@ section {
 
 .nav-arrows {
     user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 #schedule-section .fa-arrow-circle-left, #schedule-section .fa-arrow-circle-right {
@@ -285,15 +363,40 @@ section {
     color: #FD9845 !important;
 }
 
+#schedule-section .tr {
+    cursor: pointer;
+}
+
 #schedule-section #time, #schedule-section #location {
     text-align: left;
 }
 
-#scheduleSat .schedule-event-div {
+#scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div {
     max-height: 350px;
     overflow-y: auto;
 }
 
+#schedule-section .active {
+    background: #d9d9d9;
+}
+
+#schedule-section h2:not(#schedule-detail-event) {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.schedule-footer {
+    padding-top: 20px;
+}
+
+.schedule-footer * {
+    text-align: center;
+    font-size: medium;
+    margin: 10px 0;
+}
+
+/* Scrollbar - Chrome/Safari */
 .schedule-scrollbar::-webkit-scrollbar {
     width: 5px;
 }
@@ -308,20 +411,10 @@ section {
     border-radius: 10px;
 }
 
-#schedule-section .active {
-    background: #d9d9d9;
-}
-
-#schedule-section h2:not(#schedule-detail-event) {
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-#schedule-section p {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
+/* Scrollbar - Firefox */
+.schedule-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #FD9845 #FAC8A2;
 }
 
 /* ----- FAQ ----- */
