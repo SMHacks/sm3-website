@@ -126,12 +126,19 @@ section {
     background: linear-gradient(0deg, rgba(226, 61, 44, 1) 0%, rgba(253, 106, 29, 1) 10%, rgba(252, 196, 69, 1) 70%);
     background: rgb(222,88,71); */
     background: rgb(255,89,36);
-    background: linear-gradient(0deg, rgba(255,89,36,1) 0%, rgba(255,144,36,1) 56%, rgba(255,203,122,1) 82%);    -webkit-background-clip: text;
+    background: linear-gradient(0deg, rgba(255,89,36,1) 0%, rgba(255,144,36,1) 56%, rgba(255,203,122,1) 82%);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .headingw {
   color:white;
+  margin-bottom: 20px;
+}
+
+.heading-gray{
+  color: #4d4d4d;
+  margin-bottom: 20px;
 }
 
 /* ----- TOP ----- */
@@ -183,7 +190,7 @@ section {
 
 #about-section {
   /* background: linear-gradient(180deg, rgba(255,139,102,1) 0%, rgba(255,157,62,1) 72%, rgba(255,212,146,1) 93%); */
-    background-color: #FD9845;
+    background-color: #ffb366;
 }
 
 #about-text, #about-img-div {
