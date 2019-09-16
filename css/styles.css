@@ -182,7 +182,9 @@ section {
 /* ----- ABOUT ----- */
 
 #about-section {
-  background: linear-gradient(180deg, rgba(255,139,102,1) 0%, rgba(255,157,62,1) 72%, rgba(255,212,146,1) 93%);}
+  /* background: linear-gradient(180deg, rgba(255,139,102,1) 0%, rgba(255,157,62,1) 72%, rgba(255,212,146,1) 93%); */
+    background-color: #FD9845;
+}
 
 #about-text, #about-img-div {
     margin: 0 20px;
