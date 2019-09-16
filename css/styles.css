@@ -310,7 +310,8 @@ section {
 
 #schedule-wrapper {
     /* background: var(--panel-bg-light); */
-    background: linear-gradient(180deg, rgba(255,89,36,0.6909138655462185) 0%, rgba(255,144,36,0.7609418767507002) 66%, rgba(255,203,122,0.68531162464986) 88%);
+    /* background: linear-gradient(180deg, rgba(255,89,36,0.6909138655462185) 0%, rgba(255,144,36,0.7609418767507002) 66%, rgba(255,203,122,0.68531162464986) 88%); */
+    background: #FD9845;
     border-radius: 25px;
     margin-top: 50px;
     padding: 40px;
