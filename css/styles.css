@@ -242,7 +242,7 @@ section {
 }
 
 #modal-gallery-img .modal-body {
-    padding: 0;
+    padding: 0 50px;
 }
 
 #modal-gallery-img img {
