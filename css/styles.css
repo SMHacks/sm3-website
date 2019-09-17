@@ -181,8 +181,8 @@ section {
 
 #about-text {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
 }
 
 #about-img-div {
