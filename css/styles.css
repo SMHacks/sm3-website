@@ -139,9 +139,10 @@ section {
 }
 
 #title-div {
-    position: relative;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #title-text {
@@ -589,6 +590,16 @@ footer p {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+}
+
+/* Just to make sure the title text doesn't wrap */
+@media (min-width: 2250px) {
+    #title-text {
+        font-size: 180px;
+    }
+    .top-info {
+        font-size: 90px;
+    }
 }
 
 /* Portrait */
