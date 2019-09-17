@@ -173,9 +173,15 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
-#about-text {
+#about-text-div {
     border-radius: 3px;
     /*background-color: var(--panel-bg-dark);*/
+}
+
+#about-text {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #about-img-div {
@@ -532,6 +538,10 @@ footer {
     position: relative;
     background-color: var(--panel-bg-light);
     text-align: center;
+}
+
+footer p {
+    margin-top: 15px;
 }
 
 /* ---- SCROLL-TO-TOP BUTTON ---- */
