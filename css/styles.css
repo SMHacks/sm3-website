@@ -144,6 +144,16 @@ section {
     transform: translateY(-50%);
 }
 
+#title-text {
+    font-size: 8vw;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.top-info {
+    font-size: 4vw;
+}
+
 #logo-div {
     padding: 15px;
 }
@@ -163,12 +173,6 @@ section {
     background-color: var(--panel-bg-dark);
 }
 
-#about-text, #about-img-div {
-    margin: 0 20px;
-    width: 50%;
-    padding: 25px;
-}
-
 #about-text {
     border-radius: 3px;
     /*background-color: var(--panel-bg-dark);*/
@@ -177,20 +181,18 @@ section {
 #about-img-div {
     /*border-radius: 10px;*/
     /*background-color: var(--panel-bg-dark);*/
-    padding: 0;
+    display: none;
+    padding: 35px;
     position: relative;
-
 }
 
 #about-img {
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
     width: 100%;
     object-fit: contain;
-    box-shadow: 5px 5px 15px #AAA;
 }
 
 /* ----- GALLERY ----- */
@@ -368,7 +370,12 @@ section {
     text-align: left;
 }
 
-#scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div {
+#scheduleSat .schedule-event-div {
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+#scheduleSun .schedule-event-div {
     max-height: 350px;
     overflow-y: auto;
 }
@@ -433,7 +440,7 @@ section {
     border-radius: 15px;
     background-color: var(--panel-bg-dark);
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     transition: transform 0.25s ease-in-out;
 }
 
@@ -456,7 +463,7 @@ section {
 }
 
 .faq-container:hover, .faq-top-container:hover {
-    transform: scale(1.005, 1.005);
+    transform: scale(1.0048, 1.0048);
 }
 
 .faq-container:hover::after, .faq-top-container:hover::after {
@@ -472,7 +479,7 @@ section {
 }
 
 .faq-flexbox {
-    width: 50%;
+    width: 100%;
     margin: 0 5px;
 }
 
@@ -502,6 +509,23 @@ section {
     background-color: var(--panel-bg-light);
 }
 
+.organizer-img-div {
+    padding: 10px;
+}
+
+.organizer-img {
+    border-radius: 50%;
+    width: 80%;
+    object-fit: scale-down;
+    box-shadow: 0 4px 10px #BBB;
+    transition: all 0.25s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.organizer-img:hover {
+    transform: scale(1.024, 1.024);
+}
+
 /* ----- FOOTER ----- */
 
 footer {
@@ -510,6 +534,23 @@ footer {
     background-color: var(--panel-bg-light);
     text-align: center;
 }
+
+/* ---- SCROLL-TO-TOP BUTTON ---- */
+/*#top-button {*/
+/*    position: fixed;*/
+/*    bottom: 35px;*/
+/*    right: 35px;*/
+/*    background: var(--bg-grey);*/
+/*    color: var(--panel-bg-light);*/
+/*    opacity: 0.9;*/
+/*    width: 50px;*/
+/*    height: 50px;*/
+/*    display: block;*/
+/*    border-radius: 50px;*/
+/*    z-index: 9999;*/
+/*    text-align: center;*/
+/*    padding-top: 12px;*/
+/*}*/
 
 /* ---- MEDIA QUERIES ---- */
 
@@ -520,10 +561,16 @@ footer {
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     #scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div {
-        max-height: none;
+        max-height: 350px;
         overflow-y: auto;
+    }
+    #about-img-div {
+        display: block;
+    }
+    .faq-container {
+        margin: 10px 0;
     }
 }
 
