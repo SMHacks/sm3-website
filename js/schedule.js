@@ -56,7 +56,6 @@ $('#scheduleSun .tr').popover({
 });
 
 function getPopoverHTML() {
-    console.log(this);
     let cur_id = $(this).attr('id').split('-');
     let cur_eventData = schedule_data[cur_id[2]][Number.parseInt(cur_id[3])];
 
@@ -76,3 +75,34 @@ function getPopoverHTML() {
     <div class="schedule-popover-info">${cur_eventData.info}</div>
     `
 }
+
+$('#scheduleSat .schedule-event-div, #scheduleSun .schedule-event-div').scroll(function () {
+    let rows = this.getElementsByClassName('tr');
+    for (let i = 0; i < rows.length; i++) {
+        let r = rows[i];
+        if (!r.hasAttribute('aria-describedby')) continue;
+
+        let popoverID = $(r).attr('aria-describedby');
+        let popover = document.getElementById(popoverID);
+        let popoverRect = popover.getBoundingClientRect();
+        let popoverTop = popoverRect.top;
+        let popoverBottom = popoverRect.bottom;
+
+        let scrollDiv = r.closest('.schedule-event-div');
+        let scrollDivRect = scrollDiv.getBoundingClientRect();
+        let scrollTop = scrollDivRect.top;
+        let scrollBottom = scrollDivRect.bottom;
+
+        let offsetTop = popoverTop - scrollTop;
+        let offsetBottom = popoverBottom - scrollTop;
+
+        let isVisible = offsetTop < scrollBottom - scrollTop && offsetBottom >= 0;
+
+        if (!isVisible) {
+            $(r).popover('hide');
+            $(r).blur();
+            $(r).removeAttr('aria-describedby');
+        }
+    }
+
+});

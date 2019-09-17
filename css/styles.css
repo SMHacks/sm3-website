@@ -249,7 +249,7 @@ section {
 }
 
 #modal-gallery-img .modal-body {
-    padding: 0;
+    padding: 0 50px;
 }
 
 #modal-gallery-img img {
@@ -259,11 +259,12 @@ section {
 
 #modal-gallery-next, #modal-gallery-prev {
     position: fixed;
-    padding: 0 25px;
-    font-size: 36pt;
-    color: white;
-    text-shadow: none;
-    transition: text-shadow 0.25s ease;
+    width: 36pt;
+    height: 36pt;
+    background-color: transparent;
+    fill: white;
+    transition: filter 0.25s ease;
+    transform: translateY(-50%);
 }
 
 #modal-gallery-prev-div, #modal-gallery-next-div {
@@ -271,11 +272,11 @@ section {
 }
 
 #modal-gallery-prev {
-    transform: translateX(-100%);
+    transform: translateX(-100%) translateY(-50%);
 }
 
 #modal-gallery-next:hover, #modal-gallery-prev:hover {
-    text-shadow: 0 0 10px var(--panel-bg-light);
+    filter: drop-shadow(0 0 10px var(--panel-bg-light));
 }
 
 .modal-backdrop {
