@@ -57,6 +57,7 @@ a, a:visited, a:link {
 #nav .navbar-brand {
     color: #fd9845;
     font-size: 1.5em;
+    font-style: italic;
 }
 
 #nav .nav-item .nav-link {
@@ -186,14 +187,14 @@ section {
 }
 
 #about-img-div {
-    /*border-radius: 10px;*/
-    /*background-color: var(--panel-bg-dark);*/
+    background-color: var(--panel-bg-dark);
     display: none;
     padding: 35px;
     position: relative;
 }
 
 #about-img {
+    border-radius: 10px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -254,6 +255,8 @@ section {
 
 #modal-gallery-img img {
     object-fit: fill;
+    height: 100%;
+    width: 100%;
     border-radius: 15px;
 }
 
