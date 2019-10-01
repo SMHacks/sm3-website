@@ -276,25 +276,19 @@ section {
 }
 
 #modal-gallery-next, #modal-gallery-prev {
-    position: fixed;
-    width: 36pt;
-    height: 36pt;
-    background-color: transparent;
-    fill: white;
+    top: 50%;
+    position: absolute;
+    margin: 0 15px;
+    font-size: 30px;
+    color: #FFFFFF;
     -webkit-transition: -webkit-filter 0.25s ease;
-    transition: -webkit-filter 0.25s ease;
-    transition: filter 0.25s ease;
     transition: filter 0.25s ease, -webkit-filter 0.25s ease;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
 }
 
-#modal-gallery-prev-div, #modal-gallery-next-div {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-}
-
 #modal-gallery-prev {
+    left: 20px;
     -webkit-transform: translateX(-100%) translateY(-50%);
             transform: translateX(-100%) translateY(-50%);
 }
@@ -475,8 +469,6 @@ section {
     padding: 20px;
     margin: 10px 0 0 0;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    transition: -webkit-transform 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out;
     transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
