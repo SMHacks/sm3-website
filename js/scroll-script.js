@@ -40,3 +40,24 @@ $(window).scroll(function () {
     }
 });
 
+// // Hide and show scroll-to-top button
+// $(window).scroll(function() {
+//     var scrollHeight = $(this).scrollTop();
+//     var sponsorTop = $('#sponsors-head').offset().top;
+//     var sponsorHeight = $('#sponsors-head').outerHeight();
+//
+//     if (!$('#top-button').hidden && scrollHeight > 100) {
+//         $('#top-button').fadeIn();
+//     } else {
+//         $('#top-button').fadeOut();
+//     }
+//
+//     var buttonTop = (scrollHeight + $(window).height() - 85);
+//     var buttonBottom = (scrollHeight + $(window).height() - 50);
+//     if (buttonTop >= sponsorTop && buttonBottom <= sponsorTop + sponsorHeight) {
+//         $('#top-button').css('box-shadow', '0 0 5px #BBB');
+//     } else {
+//         $('#top-button').css('box-shadow', 'none');
+//     }
+//
+// });
