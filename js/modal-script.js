@@ -25,6 +25,7 @@ $('.gallery-modal-toggle').click(function () {
 
 $('#modal-gallery-prev').click(function () {
     // Add length to ensure positive
+    console.log('prev click');
     cur_galleryImgIndex = (cur_galleryImgIndex + all_galleryImgs.length - 1) % all_galleryImgs.length;
     updateGalleryModal(all_galleryImgs[cur_galleryImgIndex]);
 });
@@ -37,5 +38,6 @@ $('#modal-gallery-next').click(function () {
 function updateGalleryModal(img) {
     let imgSrc = $(img).attr('src');
     let newSrc = imgSrc.replace('-sm.jpg', '-lg.jpg');
-    modal.find('.modal-body img').attr('src', newSrc);
+    modal.find('#modal-gallery-img-lg').attr('src', newSrc);
 }
+
