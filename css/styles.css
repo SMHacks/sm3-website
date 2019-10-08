@@ -171,7 +171,8 @@ section {
     -webkit-transform: translate(-50%);
             transform: translate(-50%);
     margin-bottom: 15px;
-    height: 340px;
+    height: 30vh;
+    max-height: 340px;
     position: relative;
     pointer-events: none;
 }
