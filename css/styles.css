@@ -532,8 +532,12 @@ section {
     color: #CCC;
 }
 
-#sponsors-section {
+#sponsors-section .content-div {
+    text-align: center;
+}
 
+.sponsor-logo-img {
+    padding: 20px;
 }
 
 /* ----- ORGANIZERS ----- */
